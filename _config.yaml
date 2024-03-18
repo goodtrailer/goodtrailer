@@ -7,7 +7,6 @@ author:
 
 plugins:
   - jekyll-feed
-  - jekyll-figure
   - jekyll-seo-tag
 
 header_pages:
