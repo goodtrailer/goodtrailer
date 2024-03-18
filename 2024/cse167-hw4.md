@@ -1,0 +1,53 @@
+# CSE 167 Homework 4
+## Acceleration Structure
+I implemented a Bounding Volume Hierarchy along the lines of Pharr, Jakob, and Humphreys's  *Physically Based Rendering 4e*, along with an efficient intersection algorithm for axis-aligned bounding volumes given by Ericson's *Real-Time Collision Detection*. 
+
+A comparison of render times can be found below. The program was compiled with MSVC using `/O2` optimization and `/openmp` paralellization, and it was run on my laptop's Intel i7-12700H. Notice how using the BVH was actually slower for very simple scenes, which makes sense because traversing a tree is slower than a simple `for`-loop for few elements.
+```
+Scene            BVH       No BVH
+-----            ---       ------
+scene4-ambient   0.1s  vs    0.0s
+scene4-diffuse   0.1s  vs    0.1s
+scene4-emission  0.1s  vs    0.1s
+secen4-specular  0.1s  vs    0.1s
+scene5           0.1s  vs    1.8s
+scene6           0.1s  vs    0.1s
+scene7           0.4s  vs  323.3s
+```
+
+[CSE 167 image-grader report.](https://raviucsdgroup.s3.amazonaws.com/hw3/6102a1a992205cdaa41cb91a62662014/20240318025251/index.html) (The extremely high accuracy of 0-10 hot pixels was achieved using more precise intersection algorithms described by Wachter, Binder (2019) and Haines et al. (2019); both can be found in *Ray Tracing Gems*)
+
+Using the BVH, I was able to render the following scene of a reflective Stanford dragon in a highly reflective box, just for fun.
+### Stanford Dragon: `shininess 70` `specular .7 .7 .7`, 3840x2160, 2m06s
+![](assets/cse167-hw4/scene9.png)
+
+## Gamma Correction
+I added a `colorspace` command for scene files which allows input/output colors to be in either linear (default) or sRGB. The original assignment requires *not* performing gamma correction. However, PNGs actually assume sRGB, which leads to the linear outputs looking harsh/wrong. So using `colorspace output srgb` and `colorspace input srgb`, I managed to achieve the "correct" images. Since all the scene files contained values which were based on incorrect linear outputs, the "correct" images look quite odd. The main interest point is the lighting on the ceiling. Note how the brightness fades very quickly in the linear output compared to the sRGB output.
+
+### Linear: "Incorrect," according to PNG standard
+![](assets/cse167-hw4/linear.png)
+
+### sRGB: "Correct," but looks weird with the original values
+![](assets/cse167-hw4/srgb.png)
+
+## Transmission
+I also implemented `transmittance` and `ior` (index of refraction) commands. The effects look okay, but a few aspects are admittedly missing (e.g. total internal reflection, transmission with intersecting objects, etc.). However, the effect is still decently realistic. For example, the following images demonstrate how a transparent sphere warps light at different refractive indices. Notably, a glass ball (`ior 1.5`) seems to turn the image upside down, which is supposedly physically accurate. (The images were rendered with `colorspace input srgb` and `colorspace output srgb`).
+
+### Sphere: `ior 1.015`, 1920x1440, 0m15s
+![](assets/cse167-hw4/scene8-ior1.015.png)
+
+### Sphere: `ior 1.5`, 1920x1440, 0m15s
+![](assets/cse167-hw4/scene8-ior1.5.png)
+
+Just to experiment, I also rendered a few scenes of the Stanford dragon with varying refractive indices and transmittance. These scenes were pretty taxing, and I actually had to implement a very rough/approximate squareroot algorithm to speed things up. Though `std::sqrt` actually out-performed my approximate algorithm in standalone tests (modern CPUs have a built-in squareroot unit), it drastically slowed down under high volume (e.g. with `maxdepth 9`, where there can be 2^9 rays per pixel as a result of transmittance + reflection). I'm not entirely sure why `std::sqrt` slowed down so much, though. Maybe CPUs just don't have that many squareroot units, so it's a throughput issue.
+
+### Stanford Dragon: `ior 1.015` `transmittance .37 .74 .47, 3840x2160, 16m32s
+![](assets/cse167-hw4/scene10-ior1.015.png)
+
+### Stanford Dragon: `ior 1.5` `transmittance .37 .74 .47`, 3840x2160, 26m59s
+![](assets/cse167-hw4/scene10-ior1.5.png)
+
+### Stanford Dragon: `ior 1.5` `transmittance .95 .95 .95`, 3840x2160, 26m32s
+![](assets/cse167-hw4/scene10-ior1.5-clear.png)
+
+It's interesting how chaotic/noisy the final image is, as the refractive index is quite high and the model is quite complex/layered. There's also some dark spots near the tail which are caused by the `maxdepth` being too low, but bumping it up any higher results in exponentially increasing render times.
