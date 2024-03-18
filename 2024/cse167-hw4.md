@@ -1,4 +1,3 @@
-# CSE 167 Homework 4
 ## Acceleration Structure
 I implemented a Bounding Volume Hierarchy along the lines of Pharr, Jakob, and Humphreys's  *Physically Based Rendering 4e*, along with an efficient intersection algorithm for axis-aligned bounding volumes given by Ericson's *Real-Time Collision Detection*. 
 
