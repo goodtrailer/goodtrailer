@@ -5,14 +5,9 @@
   "minima/skins/{{ site.minima.skin | default: 'classic' }}",
   "minima/initialize";
 
-img + em {
-  display: block;
+figure {
   text-align: center;
+  font-style: italic;
   color: $lm-brand-color-dark;
-}
-
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 2em auto;
 }
