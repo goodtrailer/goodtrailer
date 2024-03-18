@@ -6,9 +6,9 @@
   "minima/initialize";
 
 img + em {
+  display: block;
   text-align: center;
-  color: $lm-brand-color;
-  font-size: .8rem
+  color: $lm-brand-color-dark;
 }
 
 img {
