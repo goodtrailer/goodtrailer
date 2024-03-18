@@ -7,11 +7,13 @@ author:
 
 plugins:
   - jekyll-feed
+  - jekyll-paginate
   - jekyll-seo-tag
 
 header_pages:
   - README.md
 
+paginate: 10
 show_excerpts: true
 
 minima:
