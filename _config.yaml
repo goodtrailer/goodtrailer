@@ -6,6 +6,7 @@ author:
   email: aldenwu0@gmail.com
 
 plugins:
+  - jekyll-feed
   - jekyll-seo-tag
 
 header_pages:
@@ -13,7 +14,8 @@ header_pages:
 
 show_excerpts: true
 
-social_links:
-  - { platform: github, user_url: "https://github.com/goodtrailer" }
-  - { platform: linkedin,       user_url: "https://www.linkedin.com/in/aldenwu0" }
-  - { platform: youtube,        user_url: "https://www.youtube.com/@goodtrailer0" }
+minima:
+  social_links:
+    - { platform: github, user_url: "https://github.com/goodtrailer" }
+    - { platform: linkedin,       user_url: "https://www.linkedin.com/in/aldenwu0" }
+    - { platform: youtube,        user_url: "https://www.youtube.com/@goodtrailer0" }
