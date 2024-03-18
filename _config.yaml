@@ -6,11 +6,12 @@ author:
   email: aldenwu0@gmail.com
 
 plugins:
-  - jekyll-feed
   - jekyll-seo-tag
 
 header_pages:
   - README.md
+
+show_excerpts: true
 
 social_links:
   - { platform: github, user_url: "https://github.com/goodtrailer" }
