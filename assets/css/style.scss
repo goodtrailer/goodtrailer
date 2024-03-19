@@ -5,13 +5,12 @@
   "minima/skins/{{ site.minima.skin | default: 'classic' }}",
   "minima/initialize";
 
-.figure > *:first-child {
+.figure {
   display: block;
   margin: 2em auto;
-  text-align: center;
 }
 
-.figure > *:first-child + em {
+.figure + em, .figcaption {
   display: block;
   margin: -1.5em auto 2em;
   text-align: center;
