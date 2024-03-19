@@ -5,17 +5,25 @@
   "minima/skins/{{ site.minima.skin | default: 'classic' }}",
   "minima/initialize";
 
+.contact-list {
+    margin: 0;
+}
+
+.social-media-list {
+    margin: 0 0 0 auto;
+}
+
 .figure {
-  margin: 2em auto;
+    margin: 2em auto;
 }
 
 img.figure {
-  display: block;
+    display: block;
 }
 
 .figure + em, .figcaption {
-  display: block;
-  margin: -1.5em auto 2em;
-  text-align: center;
-  color: $lm-brand-color-dark;
+    display: block;
+    margin: -1.5em auto 2em;
+    text-align: center;
+    color: $lm-brand-color-dark;
 }
