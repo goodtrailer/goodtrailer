@@ -6,8 +6,11 @@
   "minima/initialize";
 
 .figure {
-  display: block;
   margin: 2em auto;
+}
+
+img.figure {
+  display: block;
 }
 
 .figure + em, .figcaption {
