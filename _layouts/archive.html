@@ -1,0 +1,36 @@
+---
+layout: base
+---
+
+<div class="home">
+    {%- if page.title -%}
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    {%- endif -%}
+
+    {{ content }}
+
+    {%- if site.posts.size > 0 -%}
+
+    {% assign tags = site.tags | sort %}
+
+    {% for tag in tags %}
+    {% assign tag_name = tag | first | replace: "_", " " %}
+    {% assign posts = tag | last %}
+    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+    <div id="{{ tag_name | slugize }}"></div>
+    <h3 class="post-list-heading">#{{ tag_name }}</h3>
+    <ul class="post-list post-list-narrow">
+        {%- for post in posts -%}
+        <li>
+            <span class="post-meta">{{ post.date | date: date_format }}</span>
+            <a class="post-link" href="{{ post.url | relative_url }}">
+                {{ post.title | escape }}
+            </a>
+        </li>
+        {%- endfor -%}
+    </ul>
+    {% if forloop.last == false %}
+    <hr class="post-list-separator" />{% endif %}
+    {% endfor %}
+    {%- endif -%}
+</div>

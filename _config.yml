@@ -11,7 +11,8 @@ plugins:
   - jekyll-seo-tag
 
 header_pages:
-  - blog/index
+  - archive.md
+  - blog/index.html
 
 paginate: 10
 paginate_path: "/blog/page:num/"

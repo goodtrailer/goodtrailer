@@ -13,6 +13,21 @@
     margin: 0 0 0 auto;
 }
 
+.post-list-narrow > li {
+    margin-bottom: $spacing-unit * 0.5;
+}
+
+.post-list-separator {
+    color: $lm-border-color-01;
+    background-color: $lm-border-color-01;
+    border: none;
+    height: 1px;
+}
+
+.post-meta > a {
+    color: inherit;
+}
+
 .figure {
     margin: 2em auto;
 }
