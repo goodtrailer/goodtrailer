@@ -11,7 +11,7 @@ plugins:
   - jekyll-seo-tag
 
 header_pages:
-  - README.md
+  - blog/index
 
 paginate: 10
 paginate_path: "/blog/page:num/"
@@ -19,7 +19,10 @@ show_excerpts: true
 
 minima:
   social_links:
-    - { platform: rss, user_url: "https://aldw.net/feed.xml" }
+    - { platform: rss, user_url: "/feed.xml" }
     - { platform: github, user_url: "https://github.com/goodtrailer" }
     - { platform: linkedin, user_url: "https://www.linkedin.com/in/aldenwu0" }
     - { platform: youtube, user_url: "https://www.youtube.com/@goodtrailer0" }
+
+kramdown:
+  math_engine: katex
