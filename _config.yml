@@ -11,6 +11,7 @@ plugins:
   - jekyll-seo-tag
 
 header_pages:
+  - resume.md
   - archive.md
   - blog/index.html
 

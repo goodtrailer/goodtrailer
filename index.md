@@ -3,5 +3,5 @@ layout: base
 assets: /assets/index/
 ---
 
-![]({{page.assets}}20230909_113747.jpg){:.figure}
-*9/9/2023*
+![]({{page.assets}}20240322_185813.jpg){:.figure}
+*3/22/2024*
