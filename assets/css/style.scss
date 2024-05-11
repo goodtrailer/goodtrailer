@@ -53,10 +53,10 @@ img.figure {
     }
 
     td {
-        padding: 10px;
+        padding: 5px 10px;
 
         img {
-            padding: 0px 10px;
+            margin: 8px 5px;
         }
     }
 }
@@ -72,7 +72,11 @@ img.figure {
     }
 
     td:nth-child(2), th:nth-child(2) {
-        padding: 5px;
+        padding: 2px 4px;
+
+        img {
+            margin: 3px 2px;
+        }
     }
     
     tr:nth-child(1) > td:nth-child(1) {
