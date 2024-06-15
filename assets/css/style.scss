@@ -32,7 +32,7 @@
     margin: 2em auto;
 }
 
-img {
+img, .pdf {
     border-radius: 10px;
     box-shadow: 0 0 5px 0 #00000022;
 }
@@ -88,6 +88,10 @@ img.figure {
 }
 
 .imgrow {
+    border-radius: 10px;
+    border: 0;
+    box-shadow: 0 0 5px 0 #00000022;
+
     img {
         max-height: 200px;
     }
@@ -107,6 +111,10 @@ img.figure {
 }
 
 .tierlist {
+    border-radius: 10px;
+    border: 0;
+    box-shadow: 0 0 5px 0 #00000022;
+
     img {
         border-radius: 5px;
     }
@@ -114,6 +122,24 @@ img.figure {
     th, td {
         border: 0;
         padding: 0;
+    }
+
+    th:nth-child(1) {
+        border-top-left-radius: 10px;
+    }
+
+    th:nth-child(2) {
+        border-top-right-radius: 10px;
+    }
+
+    tr:last-child {
+        td:nth-child(1) {
+            border-bottom-left-radius: 10px;
+        }
+
+        td:nth-child(2) {
+            border-bottom-right-radius: 10px;
+        }
     }
 
     th:nth-child(1) {
