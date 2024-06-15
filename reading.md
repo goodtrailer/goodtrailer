@@ -5,7 +5,7 @@ assets: /assets/reading/
 ---
 
 ## what i've been reading
-*as of may 14, 2024*
+*as of june 14, 2024*
 
 {:.imgrow}
 | |
