@@ -66,6 +66,10 @@ img.figure {
         :has(img) {
             order: -1;
         }
+
+        .carousel__holder {
+            margin-bottom: 15px;
+        }
     }
 
     @media only screen and (min-width: 600px) {
@@ -80,10 +84,37 @@ img.figure {
                 margin-top: -10px;
             }
         }
-            
+
         :has(img) {
             flex: 2;
         }
+    }
+}
+
+.project-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+    
+    * {
+        h3 {
+            margin-top: 0;
+            margin-bottom: 4px;
+        }
+    }
+
+    :has(img), .carousel__holder {
+        order: -1;
+    }
+
+    .carousel__holder {
+        padding-bottom: min(300px, 100%);
+        margin-bottom: 15px;
+    }
+
+    img {
+        max-height: 300px;
     }
 }
 
