@@ -19,13 +19,18 @@ assets: /assets/index/
         ["{{page.assets}}20231125_124518.jpg", "11/25/2023"],
         ["{{page.assets}}20240120_033120.jpg", "1/20/2024"],
         ["{{page.assets}}20240322_185813.jpg", "3/22/2024"],
-        ["{{page.assets}}20240707_120032.jpg", "7/7/2024"],
         ["{{page.assets}}20240616_083017.jpg", "6/16/2024"],
+        ["{{page.assets}}20240707_120032.jpg", "7/7/2024"],
     ];
 
-    const choice =
-        Math.random() < 0.5 ? pool[pool.length - 1]
-                            : pool[Math.floor(Math.random() * (pool.length - 1))];
+    const featured = pool.length - 2;
+
+    let choice = pool[featured];
+    if (Math.random() < 0.5)
+    {
+        const r = Math.floor(Math.random() * (pool.length - 1));
+        choice = pool[r >= featured ? r + 1 : r];
+    }
 
     window.addEventListener("load", (e) => {
         document.getElementById("featured-pic").setAttribute("src", choice[0]);
