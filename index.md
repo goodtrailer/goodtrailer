@@ -20,6 +20,7 @@ assets: /assets/index/
         ["{{page.assets}}20240120_033120.jpg", "1/20/2024"],
         ["{{page.assets}}20240322_185813.jpg", "3/22/2024"],
         ["{{page.assets}}20240616_083017.jpg", "6/16/2024"],
+        ["{{page.assets}}20240707_120032.jpg", "7/7/2024"],
     ];
 
     const choice =
