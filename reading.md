@@ -4,21 +4,73 @@ title: reading
 assets: /assets/reading/
 ---
 
-## what i've been reading
-*as of june 14, 2024*
+{% assign a=page.assets %}
 
-{:.imgrow}
-| |
-|-|
-| [![]({{page.assets}}Tu - IM.png)](https://doi.org/10.1007/978-1-4419-7400-6) [![]({{page.assets}}Axler - LADR.png)](https://linear.axler.net) |
+## what i've been reading
+*as of july 25, 2024*
+
+<table class="imgrow">
+    <tbody>
+        <tr>
+            <td>
+                {% include book.html img="Munkres - T.png" author="Munkres" title="Topology" ed="2e" href="https://www.pearson.com/en-us/subject-catalog/p/topology-classic-version/P200000006299" %}
+                {% include book.html img="Tu - IM.png" author="Tu" title="An Introduction to Manifolds" ed="2e" href="https://doi.org/10.1007/978-1-4419-7400-6" %}
+                {% include book.html img="Axler - LADR.png" author="Axler" title="Linear Algebra Done Right" ed="4e" href="https://linear.axler.net" %}
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 ## tier list
 
-{:.tierlist}
-| S | [![]({{page.assets}}Axler - LADR.png)](https://linear.axler.net) [![]({{page.assets}}Hubbard - VCLADF.png)](http://matrixeditions.com/5thUnifiedApproach.html) [![]({{page.assets}}Gortler - F3CG.png)](https://mitpress.mit.edu/9780262017350/foundations-of-3d-computer-graphics) |
-| :--: | :--- |
-| A | [![]({{page.assets}}Tu - IM.png)](https://doi.org/10.1007/978-1-4419-7400-6) [![]({{page.assets}}Pharr - PBRT.png)](https://pbrt.org) [![]({{page.assets}}Pugh - RMA.png)](https://doi.org/10.1007/978-3-319-17771-7) |
-| B | [![]({{page.assets}}Rudin - PMA.png)](https://en.wikipedia.org/wiki/Principles_of_Mathematical_Analysis) [![]({{page.assets}}Stein - FA.png)](https://press.princeton.edu/books/hardcover/9780691113845/fourier-analysis) [![]({{page.assets}}Strogatz - NDC.png)](https://doi.org/10.1201/9780429398490 ) [![]({{page.assets}}Steele - CSMC.png)](https://doi.org/10.1017/CBO9780511817106) |
-| C | [![]({{page.assets}}Nederpelt - TTFP.png)](https://doi.org/10.1017/CBO9781139567725) [![]({{page.assets}}Deisenroth - MML.png)](https://mml-book.com) [![]({{page.assets}}Akenine-Moller - RTR.png)](https://www.realtimerendering.com/) |
-| D | [![]({{page.assets}}Larson - C.png)](https://www.cengage.com/c/calculus-11e-larson/9780547167022/) |
-| F | [![]({{page.assets}}Ericson - RTCD.png)](https://realtimecollisiondetection.net/) |
+<table class="tierlist">
+    <thead>
+        <tr>
+            <th>S</th>
+            <th>
+                {% include book.html img="Axler - LADR.png" author="Axler" title="Linear Algebra Done Right" ed="4e" href="https://linear.axler.net" %}
+                {% include book.html img="Hubbard - VCLADF.png" author="Hubbard, Hubbard" title="Vector Calculus, Linear Algebra, and Differential Forms" ed="5e" href="http://matrixeditions.com/5thUnifiedApproach.html" %}
+                {% include book.html img="Gortler - F3CG.png" author="Gortler" title="Foundations of 3D Computer Graphics" href="https://mitpress.mit.edu/9780262017350/foundations-of-3d-computer-graphics" %}
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>A</td>
+            <td>
+                {% include book.html img="Tu - IM.png" author="Tu" title="An Introduction to Manifolds" ed="2e" href="https://doi.org/10.1007/978-1-4419-7400-6" %}
+                {% include book.html img="Pharr - PBRT.png" author="Pharr, Jakob, Humphreys" title="Physically Based Rendering" ed="4e" href="https://pbrt.org" %}
+                {% include book.html img="Pugh - RMA.png" author="Pugh - Real Mathematical Analysis" ed="2e" title="" href="https://doi.org/10.1007/978-3-319-17771-7" %}
+            </td>
+        </tr>
+        <tr>
+            <td>B</td>
+            <td>
+                {% include book.html img="Rudin - PMA.png" author="Rudin" title="Principles of Mathematical Analysis" ed="3e" href="https://en.wikipedia.org/wiki/Principles_of_Mathematical_Analysis" %}
+                {% include book.html img="Stein - FA.png" author="Stein, Shakarchi" title="Fourier Analysis" href="https://press.princeton.edu/books/hardcover/9780691113845/fourier-analysis" %}
+                {% include book.html img="Strogatz - NDC.png" author="Strogatz" title="Nonlinear Dynamics and Chaos" ed="3e" href="https://doi.org/10.1201/9780429398490" %}
+                {% include book.html img="Steele - CSMC.png" author="Steele" title="The Cauchy-Schwarz Master Class" href="https://doi.org/10.1017/CBO9780511817106" %}
+            </td>
+        </tr>
+        <tr>
+            <td>C</td>
+            <td>
+                {% include book.html img="Nederpelt - TTFP.png" author="Nederpelt, Guevers" title="Type Theory and Formal Proof" href="https://doi.org/10.1017/CBO9781139567725" %}
+                {% include book.html img="Deisenroth - MML.png" author="Deisenroth, Faisal, Ong" title="Mathematics of Machine Learning" href="https://mml-book.com" %}
+                {% include book.html img="Akenine-Moller - RTR.png" author="Akenine-M&ouml;ller et al." title="Real-Time Rendering" ed="4e" href="https://www.realtimerendering.com" %}
+            </td>
+        </tr>
+        <tr>
+            <td>D</td>
+            <td>
+                {% include book.html img="Larson - C.png" author="Larson" title="Calculus" ed="9e" href="https://www.cengage.com/c/calculus-11e-larson/9780547167022/" %}
+            </td>
+        </tr>
+        <tr>
+            <td>F</td>
+            <td>
+                {% include book.html img="Ericson - RTCD.png" author="Ericson" title="Real-Time Collision Detection" href="https://realtimecollisiondetection.net/" %}
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -141,6 +141,11 @@ img.figure {
     }
 }
 
+.book {
+    display: inline-block;
+    width: max-content;
+}
+
 .tierlist {
     border-radius: 10px;
     border: 0;
@@ -148,11 +153,13 @@ img.figure {
 
     img {
         border-radius: 5px;
+        max-height: 100px;
     }
 
-    th, td {
+    th:nth-child(1), td:nth-child(1) {
         border: 0;
         padding: 0;
+        text-align: center;
     }
 
     th:nth-child(1) {
@@ -223,8 +230,54 @@ img.figure {
     tr:nth-child(even) > td:nth-child(2) {
         background: #FFFFFF;
     }
+}
 
-    img {
-        max-height: 100px;
-    }
+.tooltip-container {
+    position: relative;
+}
+
+.tooltip-container .tooltip {
+    display: none;
+    z-index: 1;
+
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    margin-bottom: 5px;
+
+    width: max-content;
+}
+
+.tooltip-container:hover .tooltip {
+    display: initial;
+}
+
+.tooltip-container .tooltip::after {
+    content: " ";
+
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    transform: translateX(-50%);
+
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+.tooltip-container .tooltip-text {
+    position: relative;
+    left: -50%;
+
+
+    width: max-content;
+    max-width: 200px;
+    padding: 5px 8px;
+
+    border-radius: 6px;
+
+    background-color: #333;
+    color: #fff;
+
+    text-align: center;
 }

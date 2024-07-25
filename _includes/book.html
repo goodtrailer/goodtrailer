@@ -1,0 +1,16 @@
+{% assign img = include.img %}
+{% assign href = include.href %}
+{% assign author = include.author %}
+{% assign title = include.title %}
+{% assign ed = include.ed %}
+
+<div class="book tooltip-container">
+    <a href="{{ href }}">
+        <img src="{{ page.assets }}/{{ img }}">
+    </a>
+    <div class="tooltip">
+        <div class="tooltip-text">
+            {{ author }} - <em>{{ title }}</em> {{ ed }}
+        </div>
+    </div>
+</div>
