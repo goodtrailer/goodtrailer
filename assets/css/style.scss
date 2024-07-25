@@ -122,6 +122,7 @@ img.figure {
     border-radius: 10px;
     border: 0;
     box-shadow: 0 0 5px 0 #00000022;
+    overflow: visible;
 
     img {
         max-height: 200px;
@@ -150,14 +151,18 @@ img.figure {
     border-radius: 10px;
     border: 0;
     box-shadow: 0 0 5px 0 #00000022;
+    overflow: visible;
 
     img {
         border-radius: 5px;
         max-height: 100px;
     }
 
-    th:nth-child(1), td:nth-child(1) {
+    td, th {
         border: 0;
+    }
+
+    th:nth-child(1), td:nth-child(1) {
         padding: 0;
         text-align: center;
     }
