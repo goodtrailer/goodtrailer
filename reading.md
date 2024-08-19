@@ -39,6 +39,7 @@ assets: /assets/reading/
             <td>A</td>
             <td>
                 {% include book.html img="Tu - IM.png" author="Tu" title="An Introduction to Manifolds" ed="2e" href="https://doi.org/10.1007/978-1-4419-7400-6" %}
+                {% include book.html img="Munkres - T.png" author="Munkres" title="Topology" ed="2e" href="https://www.pearson.com/en-us/subject-catalog/p/topology-classic-version/P200000006299" %}
                 {% include book.html img="Pharr - PBRT.png" author="Pharr, Jakob, Humphreys" title="Physically Based Rendering" ed="4e" href="https://pbrt.org" %}
                 {% include book.html img="Pugh - RMA.png" author="Pugh - Real Mathematical Analysis" ed="2e" title="" href="https://doi.org/10.1007/978-3-319-17771-7" %}
             </td>
