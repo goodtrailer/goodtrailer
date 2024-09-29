@@ -33,7 +33,7 @@ carousels:
     - caption: 8/22/2023, 3:57pm
     - caption: 9/09/2023, 11:37am
     - caption: 9/17/2023, 2:28pm
-    - caption: 11/25/202, 12:45pm
+    - caption: 11/25/2023, 12:45pm
     - caption: 1/20/2024, 3:31am
     - caption: 3/22/2024, 6:58pm
     - caption: 6/16/2024, 8:30am
