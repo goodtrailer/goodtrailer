@@ -11,39 +11,40 @@
 <div class="carousel__holder carousel__holder{{ number }}">
     <div id="carousel{{ number }}" class="carousel">
         {% for item in page.carousels[number].images %}
-          <input class="carousel__activator" type="radio" name="carousel{{ number }}" id="__activator_{{ number }}_{{ forloop.index0 }}" {% if forloop.index0 == first-slide %}checked="checked"{% endif %} />
+            <input class="carousel__activator" type="radio" name="carousel{{ number }}" id="__activator_{{ number }}_{{ forloop.index0 }}" {% if forloop.index0 == first-slide %}checked="checked"{% endif %} />
         {% endfor %}
+
         {% for item in page.carousels[number].images %}
-          {% if forloop.index == forloop.length %}
-            {% assign nextindex = 0 %}
-          {% else %}
-            {% assign nextindex = forloop.index0 | plus: 1 %}
-          {% endif %}
-          {% if forloop.index0 == 0 %}
-            {% assign previndex = forloop.length | minus: 1 %}
-          {% else %}
-            {% assign previndex = forloop.index0 | minus: 1 %}
-          {% endif %}
-          <div class="carousel__controls">
-              <label class="carousel__control carousel__control--backward" for="__activator_{{ number }}_{{ previndex }}"></label>
-              <label class="carousel__control carousel__control--forward" for="__activator_{{ number }}_{{ nextindex }}"></label>
-          </div>
+            {% if forloop.index == forloop.length %}
+                {% assign nextindex = 0 %}
+            {% else %}
+                {% assign nextindex = forloop.index0 | plus: 1 %}
+            {% endif %}
+            {% if forloop.index0 == 0 %}
+                {% assign previndex = forloop.length | minus: 1 %}
+            {% else %}
+                {% assign previndex = forloop.index0 | minus: 1 %}
+            {% endif %}
+            <div class="carousel__controls">
+                <label class="carousel__control carousel__control--backward" for="__activator_{{ number }}_{{ previndex }}"></label>
+                <label class="carousel__control carousel__control--forward" for="__activator_{{ number }}_{{ nextindex }}"></label>
+            </div>
         {% endfor %}
+
         <div class="carousel__track">
-          <ul>
             {% for item in page.carousels[number].images %}
-            <li class="carousel__slide">
-                <img src="{{ item.image }}"/>
-                {% if forloop.index0 < page.carousels[number].captions.size and page.carousels[number].captions[forloop.index0] != "" %}
-                    <div class="carousel__caption">
-                        <em>
+                <div class="carousel__slide">
+                    <div class="carousel__window">
+                        <img src="{{ item.image }}"/>
+                    </div>
+
+                    {% if forloop.index0 < page.carousels[number].captions.size and page.carousels[number].captions[forloop.index0] != "" %}
+                        <em class="carousel__caption">
                             {{ page.carousels[number].captions[forloop.index0].caption }}
                         </em>
-                    </div>
-                {% endif %}
-            </li>
+                    {% endif %}
+                </div>
             {% endfor %}
-          </ul>
         </div>
         <div class="carousel__indicators">
             {% for item in page.carousels[number].images %}
@@ -54,18 +55,6 @@
 </div>
 
 <style>
-.carousel__holder{{ number }} {
-    padding-bottom: {{ include.height }};
-    {% if include.max-height %}
-        {% if page.carousels[number].captions.size > 0 %}
-            padding-bottom: min(calc({{ include.max-height }} + 24px), {{ include.height }});
-        {% else %}
-            padding-bottom: min({{ include.max-height }}, {{ include.height }});
-        {% endif %}
-    {% else %}
-    {% endif %}
-}
-
 {% if include.max-height %}
 .carousel__holder{{ number }} .carousel__slide img {
     max-height: calc({{ include.max-height }} + 24px);
@@ -84,13 +73,22 @@
     opacity: 1;
     transform: scale(1);
 }
+
 .carousel__activator:nth-of-type({{ forloop.index }}):checked ~ .carousel__controls:nth-of-type({{ forloop.index }}) {
     display: block;
     opacity: 1;
 }
+
 .carousel__activator:nth-of-type({{ forloop.index }}):checked ~ .carousel__indicators .carousel__indicator:nth-of-type({{ forloop.index }}) {
     opacity: 1;
 }
+
+
+{% if forloop.index0 < page.carousels[number].captions.size and page.carousels[number].captions[forloop.index0] != "" %}
+    .carousel__control:nth-of-type({{ forloop.index }}) {
+        top: calc(50% - 24px);
+    }
+{% endif %}
 {% endfor %}
 </style>
 
