@@ -3,8 +3,9 @@
 {% assign author = include.author %}
 {% assign title = include.title %}
 {% assign ed = include.ed %}
+{% assign class = include.class %}
 
-<div class="book tooltip-container">
+<div class="book tooltip-container {{ class }}">
     <a href="{{ href }}">
         <img src="{{ page.assets }}/{{ img }}">
     </a>

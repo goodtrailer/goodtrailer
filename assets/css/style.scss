@@ -156,6 +156,30 @@ img.figure {
     width: max-content;
 }
 
+.completed {
+    color: forestgreen;
+
+    img {
+        border: solid forestgreen;
+    }
+}
+
+.progressed {
+    color: darkorange;
+
+    img {
+        border: solid darkorange;
+    }
+}
+
+.skimmed {
+    color: dodgerblue;
+
+    img {
+        border: solid dodgerblue;
+    }
+}
+
 .tierlist {
     border-radius: 10px;
     border: 0;
