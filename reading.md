@@ -7,15 +7,16 @@ assets: /assets/reading/
 {% assign a=page.assets %}
 
 ## what i've been reading
-*as of july 25, 2024*
+*as of october 13, 2024*
 
 <table class="imgrow">
     <tbody>
         <tr>
             <td>
-                {% include book.html img="Munkres - T.png" author="Munkres" title="Topology" ed="2e" href="https://www.pearson.com/en-us/subject-catalog/p/topology-classic-version/P200000006299" %}
+                {% include book.html img="Folland - RA.png" author="Folland" title="Real Analysis: Modern Techniques and Their Applications" ed="2e" href="https://www.wiley.com/en-us/Real+Analysis%3A+Modern+Techniques+and+Their+Applications%2C+2nd+Edition-p-9780471317166" %}
+                {% include book.html img="Artin - A.png" author="Artin" title="Algebra" ed="2e" href="https://www.pearson.com/en-us/subject-catalog/p/algebra-classic-version/P200000006078/9780134689609" %}
+                {% include book.html img="Munkres - T.png" author="Munkres" title="Topology" ed="2e" href="https://www.pearson.com/en-us/subject-catalog/p/topology-classic-version/P200000006299" class="progressed" %}
                 {% include book.html img="Tu - IM.png" author="Tu" title="An Introduction to Manifolds" ed="2e" href="https://doi.org/10.1007/978-1-4419-7400-6" %}
-                {% include book.html img="Axler - LADR.png" author="Axler" title="Linear Algebra Done Right" ed="4e" href="https://linear.axler.net" %}
             </td>
         </tr>
     </tbody>
