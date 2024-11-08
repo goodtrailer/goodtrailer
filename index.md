@@ -21,25 +21,31 @@ carousels:
     - image: /assets/index/20240707_120032.jpg
     - image: /assets/index/20240907_085624.jpg
     - image: /assets/index/20240928_191339.jpg
+    - image: /assets/index/20241003_102528.jpg
+    - image: /assets/index/20241101_225522.jpg
+    - image: /assets/index/20241105_220025.jpg
     captions:
     - caption: 9/05/2022, 2:28pm
     - caption: 9/12/2022, 5:23pm
-    - caption: 9/15/2022, 5:16pm
-    - caption: 4/14/2023, 10:51pm
+    - caption: 9/15/2022, 5:16pm 
+    - caption: 4/14/2023, 10:51pm &mdash; kamiya's blue whale
     - caption: 6/16/2023, 4:17pm
     - caption: 7/09/2023, 10:28am
     - caption: 7/29/2023, 7:18pm
     - caption: 8/19/2023, 2:50pm
     - caption: 8/22/2023, 3:57pm
     - caption: 9/09/2023, 11:37am
-    - caption: 9/17/2023, 2:28pm
+    - caption: 9/17/2023, 2:28pm 
     - caption: 11/25/2023, 12:45pm
-    - caption: 1/20/2024, 3:31am
+    - caption: 1/20/2024, 3:31am &mdash; kamiya's little bird
     - caption: 3/22/2024, 6:58pm
     - caption: 6/16/2024, 8:30am
     - caption: 7/07/2024, 12:00pm
-    - caption: 9/07/2024, 8:56am
+    - caption: 9/07/2024, 8:56a
     - caption: 9/28/2024, 7:13pm
+    - caption: 10/03/2024, 10:25am &mdash; kamiya's pegasus
+    - caption: 11/01/2024, 10:55pm
+    - caption: 11/05/2024, 10:00pm &mdash; bioluminescence
 ---
 
 {% assign count = page.carousels[0].images.size | minus: 1 %}
