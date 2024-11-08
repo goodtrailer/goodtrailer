@@ -41,7 +41,7 @@ carousels:
     - caption: 3/22/2024, 6:58pm
     - caption: 6/16/2024, 8:30am
     - caption: 7/07/2024, 12:00pm
-    - caption: 9/07/2024, 8:56a
+    - caption: 9/07/2024, 8:56am
     - caption: 9/28/2024, 7:13pm
     - caption: 10/03/2024, 10:25am &mdash; kamiya's pegasus
     - caption: 11/01/2024, 10:55pm
