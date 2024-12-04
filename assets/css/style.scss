@@ -5,6 +5,14 @@
     "minima/skins/{{ site.minima.skin | default: 'classic' }}",
     "minima/initialize";
 
+/* Default/template components */
+
+.site-nav {
+    z-index: 1;
+}
+
+/* Custom/personal components */
+
 .contact-list {
     margin: 0;
 }
