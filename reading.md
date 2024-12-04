@@ -45,14 +45,15 @@ assets: /assets/reading/
             <td>
                 {% include book.html img="Tu - IM.png" author="Tu" title="An Introduction to Manifolds" ed="2e" href="https://doi.org/10.1007/978-1-4419-7400-6" class="progressed" %}
                 {% include book.html img="Munkres - T.png" author="Munkres" title="Topology" ed="2e" href="https://www.pearson.com/en-us/subject-catalog/p/topology-classic-version/P200000006299" class="progressed" %}
+                {% include book.html img="Folland - RA.png" author="Folland" title="Real Analysis: Modern Techniques and Their Applications" ed="2e" href="https://www.wiley.com/en-us/Real+Analysis%3A+Modern+Techniques+and+Their+Applications%2C+2nd+Edition-p-9780471317166" class="progressed"%}
                 {% include book.html img="Pharr - PBRT.png" author="Pharr, Jakob, Humphreys" title="Physically Based Rendering" ed="4e" href="https://pbrt.org" class="progressed" %}
-                {% include book.html img="Pugh - RMA.png" author="Pugh - Real Mathematical Analysis" ed="2e" title="" href="https://doi.org/10.1007/978-3-319-17771-7" class="skimmed" %}
             </td>
         </tr>
         <tr>
             <td>B</td>
             <td>
                 {% include book.html img="Rudin - PMA.png" author="Rudin" title="Principles of Mathematical Analysis" ed="3e" href="https://en.wikipedia.org/wiki/Principles_of_Mathematical_Analysis" class="completed" %}
+                {% include book.html img="Artin - A.png" author="Artin" title="Algebra" ed="2e" href="https://www.pearson.com/en-us/subject-catalog/p/algebra-classic-version/P200000006078/9780134689609" class="progressed" %}
                 {% include book.html img="Stein - FA.png" author="Stein, Shakarchi" title="Fourier Analysis" href="https://press.princeton.edu/books/hardcover/9780691113845/fourier-analysis" class="progressed" %}
                 {% include book.html img="Strogatz - NDC.png" author="Strogatz" title="Nonlinear Dynamics and Chaos" ed="3e" href="https://doi.org/10.1201/9780429398490" class="skimmed" %}
                 {% include book.html img="Steele - CSMC.png" author="Steele" title="The Cauchy-Schwarz Master Class" href="https://doi.org/10.1017/CBO9780511817106" class="skimmed" %}

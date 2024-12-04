@@ -24,6 +24,8 @@ carousels:
     - image: /assets/index/20241003_102528.jpg
     - image: /assets/index/20241101_225522.jpg
     - image: /assets/index/20241105_220025.jpg
+    - image: /assets/index/20241111_104352.jpg
+    - image: /assets/index/20241203_161504.jpg
     captions:
     - caption: 9/05/2022, 2:28pm
     - caption: 9/12/2022, 5:23pm
@@ -46,6 +48,8 @@ carousels:
     - caption: 10/03/2024, 10:25am &mdash; kamiya's pegasus
     - caption: 11/01/2024, 10:55pm
     - caption: 11/05/2024, 10:00pm &mdash; bioluminescence
+    - caption: 11/11/2024, 10:43am
+    - caption: 12/03/2024, 4:15pm &mdash; hojyo's violinist
 ---
 
 {% assign count = page.carousels[0].images.size | minus: 1 %}
