@@ -1,7 +1,12 @@
-<footer class="site-footer h-card">
+<footer class="site-footer h-card" id="footer" style="scroll-margin-top: 20px">
     <data class="u-url" href="{{ " /" | relative_url }}"></data>
 
     <div class="wrapper">
+        {%- if page.url == '/' -%}
+            <div class="footer-col-wrapper" style="margin: -20px 0 0">
+                <p style="margin: auto">&#x25B2;</p>
+            </div>
+        {%- endif -%}
 
         <div class="footer-col-wrapper">
             <div class="footer-col">
@@ -22,5 +27,11 @@
                 </div>
             </div>
         </div>
+
+        {%- if page.url == '/' -%}
+            <div class="footer-col-wrapper" style="padding: 800px 0 0 0">
+                <p>easter egg! &#128075; this padding is here to make the "contact" redirect look nicer &#128523;</p>
+            </div>
+        {%- endif -%}
     </div>
 </footer>
