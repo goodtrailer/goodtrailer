@@ -10,4 +10,4 @@ pdf: /assets/resume/Alden_Wu_resume_2025.212.0.pdf
 [permalink]({{page.pdf}}) // [download]({{page.pdf}}){:download=""}
 
 {:.pdf}
-<iframe src="/thirdparty/pdfjs/web/viewer.html?file={{page.pdf}}" title="pdfjs" frameborder="0" width="100%" height="965px"></iframe>
+<iframe src="/thirdparty/pdfjs/web/viewer.html?file={{page.pdf}}" title="pdfjs" frameborder="0" style="width:100%; aspect-ratio:8.5/11"></iframe>
