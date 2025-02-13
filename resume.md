@@ -2,10 +2,10 @@
 layout: page
 title: resume
 assets: /assets/resume/
-pdf: /assets/resume/Alden_Wu_resume_2024.818.2.pdf
+pdf: /assets/resume/Alden_Wu_resume_2025.212.0.pdf
 ---
 
-*as of august 18, 2024*
+*as of February 12, 2025*
 
 [permalink]({{page.pdf}}) // [download]({{page.pdf}}){:download=""}
 
