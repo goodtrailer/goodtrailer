@@ -4,13 +4,27 @@ title: projects
 assets: /assets/projects/
 carousels:
   - images:
-    - image: /assets/projects/path-tracer-0.png
-    - image: /assets/projects/path-tracer-1.png
-    - image: /assets/projects/path-tracer-2.png
+    - /assets/projects/path-tracer-0.png
+    - /assets/projects/path-tracer-1.png
+    - /assets/projects/path-tracer-2.png
+    dimensions:
+    - width: 1440.0
+      height: 1080.0
+    - width: 1280.0
+      height: 280.0
+    - width: 480.0
+      height: 480.0
   - images:
-    - image: /assets/projects/paper-0.png
-    - image: /assets/projects/paper-1.png
-    - image: /assets/projects/paper-2.png
+    - /assets/projects/paper-0.png
+    - /assets/projects/paper-1.png
+    - /assets/projects/paper-2.png
+    dimensions:
+    - width: 960.0
+      height: 720.0
+    - width: 1280.0
+      height: 960.0
+    - width: 1040.0
+      height: 780.0
 ---
 
 {::options parse_block_html="true" /}
@@ -19,7 +33,7 @@ carousels:
 
 {:.project-vertical}
 <div>
-{% include carousel.html height="100%" number="1" %}
+{% include carousel.html max-height="300" number="1" %}
 <div>
 ### physically based path tracer
 Monte-Carlo path tracer that is physically based. Implements the GGX microfacet model for specular reflection and transmission based on [[Walter et al. 2007]](https://www.cs.cornell.edu/~srm/publications/EGSR07-btdf.html). Uses multiple importance sampling of the BSDF and next event estimation. Final project for CSE 168: Computer Graphics II at UCSD.
@@ -68,7 +82,7 @@ Automatic wallpaper updater. Windows GUI app written in C# with extensibility in
 
 {:.project}
 <div>
-{% include carousel.html height="100%" max-height="213px" number="2" %}
+{% include carousel.html max-height="213" number="2" %}
 <div>
 ### *paper*. online turn-based game
 PvP multiplayer video game running on Unreal Engine 4. Full support for online (and local) play with up to 6 players at once. Based off of little board games I used to make in elementary school out of paper. 😄
