@@ -22,6 +22,7 @@ header_pages:
 paginate: 5
 paginate_path: "/blog/page:num/"
 show_excerpts: true
+use_seo: false
 permalink: pretty
 
 minima:
