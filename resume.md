@@ -2,12 +2,11 @@
 layout: page
 title: resume
 assets: /assets/resume/
-pdf: /assets/resume/Alden_Wu_resume_2025.212.0.pdf
+pdf: /assets/resume/Alden_Wu_resume_2025.212.0
 ---
 
 *as of february 12, 2025*
 
-[permalink]({{page.pdf}}) // [download]({{page.pdf}}){:download=""}
+[PNG permalink]({{page.pdf}}.png) // [PDF permalink]({{page.pdf}}.pdf) // [PDF download]({{page.pdf}}.pdf){:download=""}
 
-{:.pdf}
-<iframe src="/thirdparty/pdfjs/web/viewer.html?file={{page.pdf}}" title="pdfjs" frameborder="0" style="width:100%; aspect-ratio:8.5/11"></iframe>
+![]({{page.pdf}}.png)

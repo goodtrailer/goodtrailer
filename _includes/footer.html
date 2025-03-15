@@ -2,11 +2,11 @@
     <data class="u-url" href="{{ " /" | relative_url }}"></data>
 
     <div class="wrapper">
-        {%- if page.url == '/' -%}
+        {%- comment -%}{%- if page.url == '/' -%}
             <div class="footer-col-wrapper" style="margin: -20px 0 0">
                 <p style="margin: auto; text-align: center">&#x25B2;</p>
             </div>
-        {%- endif -%}
+        {%- endif -%}{%- endcomment -%}
 
         <div class="footer-col-wrapper">
             <div class="footer-col">
@@ -23,15 +23,22 @@
             </div>
             <div class="footer-col">
                 <div class="social-links">
-                    {%- include social.html -%}
+                    {%- comment -%}{%- include social.html -%}{%- endcomment -%}
+                    this website was lovingly crafted with <em>zero</em> javascript.
+                    <div style="margin-left: 2em; font-size: 85%; font-family: monospace; font-style: italic">
+                        purge all javascript<br>
+                        evil begone forever<br>
+                        static sites prevail
+                    </div>
+                    a haiku. (i don't actually hate javascript.)
                 </div>
             </div>
         </div>
 
-        {%- if page.url == '/' -%}
+        {%- comment -%}{%- if page.url == '/' -%}
             <div class="footer-col-wrapper" style="padding: 800px 0 0 0">
                 <p>easter egg! &#128075; this padding is here to make the "contact" redirect look nicer &#128523;</p>
             </div>
-        {%- endif -%}
+        {%- endif -%}{%- endcomment -%}
     </div>
 </footer>

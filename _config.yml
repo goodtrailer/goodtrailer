@@ -16,7 +16,8 @@ header_pages:
   - reading.md
   - resume.md
   - archive.md
-  - contact.md
+  #- contact.md
+  - about.md
   #- blog/index.html
 
 paginate: 5

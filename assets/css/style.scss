@@ -17,12 +17,35 @@
 
 /* Custom/personal components */
 
-.contact-list {
+footer .contact-list {
     margin: 0;
 }
 
 .social-media-list {
+    margin: 1em auto;
+    text-align: center;
+
+    li {
+        float: none;
+        display: inline-block;
+        margin: 5px;
+    }
+}
+
+footer .social-media-list {
     margin: 0 0 0 auto;
+
+    li {
+        float: left;
+    }
+
+    li:first-child {
+        margin-left: 0;
+    }
+    
+    li:last-child {
+        margin-right: 0;
+    }
 }
 
 .post-list-narrow>li {
@@ -50,6 +73,12 @@ img,
     box-shadow: 0 0 5px 0 #00000022;
 }
 
+img+em {
+    display: block;
+    text-align: center;
+    margin: 0.5em auto;
+}
+
 img.figure {
     display: block;
 }
@@ -62,7 +91,7 @@ img.figure {
     color: $lm-brand-color-dark;
 }
 
-.project {
+.project, .project-align-start {
     display: flex;
     align-items: center;
     margin: 50px 0;
@@ -71,7 +100,7 @@ img.figure {
         flex-direction: column;
 
         * {
-            h3 {
+            h2, h3 {
                 margin-top: 0;
                 margin-bottom: 4px;
             }
@@ -91,12 +120,18 @@ img.figure {
         flex-direction: row;
         gap: 30px;
 
-        * {
+        > * {
             flex: 3;
             margin: 0;
+        }
 
-            h3 {
-                margin-top: -10px;
+        * {
+            h2, h3 {
+                margin: -10px 0 0;
+            }
+
+            p {
+                margin: 0;
             }
         }
 
@@ -111,6 +146,10 @@ img.figure {
     }
 }
 
+.project-align-start {
+    align-items: start;
+}
+
 .project-vertical {
     display: flex;
     flex-direction: column;
@@ -118,7 +157,7 @@ img.figure {
     margin: 50px 0;
 
     * {
-        h3 {
+        h2, h3 {
             margin-top: 0;
             margin-bottom: 4px;
         }
