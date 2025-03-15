@@ -4,6 +4,7 @@ title: aldw
 author:
   name: Alden Wu (goodtrailer)
   email: aldenwu18@gmail.com
+repository: goodtrailer/goodtrailer
 
 plugins:
   - jekyll-feed
