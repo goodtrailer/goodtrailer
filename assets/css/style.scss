@@ -30,6 +30,10 @@ footer .contact-list {
         display: inline-block;
         margin: 5px;
     }
+
+    li:last-child {
+        margin: 5px;
+    }
 }
 
 footer .social-media-list {
