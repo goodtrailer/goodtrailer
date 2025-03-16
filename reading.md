@@ -7,7 +7,7 @@ assets: /assets/reading/
 {% assign a=page.assets %}
 
 ## what i've been reading
-*as of october 13, 2024*
+*as of march 15, 2025*
 
 <table class="imgrow">
     <tbody>
@@ -28,7 +28,7 @@ assets: /assets/reading/
 <span class="progressed">&#9632;</span> significantly progressed<br>
 <span class="skimmed">&#9632;</span> skimmed/other
 
-*ordered left&rarr;right as best&rarr;worst*
+*ordered left&rarr;right as like&rarr;dislike*
 
 <table class="tierlist">
     <thead>
