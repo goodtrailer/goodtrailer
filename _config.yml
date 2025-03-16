@@ -37,5 +37,6 @@ minima:
     - { platform: youtube, user_url: "https://www.youtube.com/@goodtrailer0", title: "YouTube" }
     - { platform: myanimelist, user_url: "https://myanimelist.net/animelist/goodtrailer?status=7&order=4&order2=0", title: "MyAnimeList" }
     - { platform: osu, user_url: "https://osu.ppy.sh/users/18510196", title: "osu!" }
+
 kramdown:
-  math_engine: katex
+  math_engine: mathjax
