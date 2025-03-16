@@ -36,7 +36,7 @@ carousels:
 {% include carousel.html max-height="300" number="1" %}
 <div>
 ### physically based path tracer
-Monte-Carlo path tracer that is physically based. Implements the GGX microfacet model for specular reflection and transmission based on [[Walter et al. 2007]](https://www.cs.cornell.edu/~srm/publications/EGSR07-btdf.html). Uses multiple importance sampling of the BSDF and next event estimation. Final project for CSE 168: Computer Graphics II at UCSD.
+Physically based rendering (PBR) using path tracing and Monte Carlo methods. Implements the Smith-GGX microfacet model for specular reflection and transmission based on [[Walter et al. 2007]](https://www.cs.cornell.edu/~srm/publications/EGSR07-btdf.html). Uses classical multiple importance sampling of the BSDF and next event estimation. Final project for CSE 168: Computer Graphics II at UC San Diego.
 <br><br>
 source unavailable (schoolwork) // [partial writeup](/work/2024/06/11/cse168-hw5/)
 </div>

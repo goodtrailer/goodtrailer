@@ -22,7 +22,7 @@ assets: /assets/reading/
     </tbody>
 </table>
 
-## tier list
+## a very opinionated tier list
 
 <span class="completed">&#9632;</span> completed<br>
 <span class="progressed">&#9632;</span> significantly progressed<br>
