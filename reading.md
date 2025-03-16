@@ -48,8 +48,8 @@ assets: /assets/reading/
                 {% include book.html img="Folland - RA.png" author="Folland" title="Real Analysis: Modern Techniques and Their Applications" ed="2e" href="https://www.wiley.com/en-us/Real+Analysis%3A+Modern+Techniques+and+Their+Applications%2C+2nd+Edition-p-9780471317166" class="progressed"%}
                 {% include book.html img="Tu - IM.png" author="Tu" title="An Introduction to Manifolds" ed="2e" href="https://doi.org/10.1007/978-1-4419-7400-6" class="progressed" %}
                 {% include book.html img="Munkres - T.png" author="Munkres" title="Topology" ed="2e" href="https://www.pearson.com/en-us/subject-catalog/p/topology-classic-version/P200000006299" class="progressed" %}
-                {% include book.html img="Aluffi - AC0.png" author="Aluffi" title="Algebra: Chapter 0" ed="1e" href="https://bookstore.ams.org/gsm-104" class="skimmed" %}
-                {% include book.html img="Tao - ERI.png" author="Tao" title="An Epsilon of Room, I" ed="1e" href="https://bookstore.ams.org/view?ProductCode=GSM/117" class="progressed" %}
+                {% include book.html img="Aluffi - AC0.png" author="Aluffi" title="Algebra: Chapter 0" href="https://bookstore.ams.org/gsm-104" class="skimmed" %}
+                {% include book.html img="Tao - ERI.png" author="Tao" title="An Epsilon of Room, I" href="https://bookstore.ams.org/view?ProductCode=GSM/117" class="progressed" %}
             </td>
         </tr>
         <tr>
