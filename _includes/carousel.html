@@ -35,7 +35,8 @@
             {% for item in page.carousels[number].images %}
             <div class="carousel__slide">
                 <div class="carousel__window">
-                    <img src=""/>
+                    <img class="carousel__image" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" loading="lazy"/>
+                    <img class="carousel__filler" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/>
                 </div>
                 {% if forloop.index0 < page.carousels[number].captions.size and page.carousels[number].captions[forloop.index0] != "" -%}
                     <em class="carousel__caption">{{ page.carousels[number].captions[forloop.index0] }}</em>
@@ -53,30 +54,38 @@
 
 <style>
 {% for item in page.carousels[number].images %}
-    .carousel__activator:nth-of-type({{ forloop.index }}):checked ~ * .carousel__slide:nth-of-type({{ forloop.index }}) {
+    {% assign clamped-height = page.carousels[number].dimensions[forloop.index0].height | at_most: include.max-height -%}
+    {%- assign ratio = page.carousels[number].dimensions[forloop.index0].width | divided_by: page.carousels[number].dimensions[forloop.index0].height -%}
+    #carousel{{ number }} .carousel__activator:nth-of-type({{ forloop.index }}):checked ~ * .carousel__slide:nth-of-type({{ forloop.index }}) {
         opacity: 1;
         transform: scale(1);
     }
-    .carousel__activator:nth-of-type({{ forloop.index }}):checked ~ * .carousel__slide:nth-of-type({{ forloop.index }}) img {
+    #carousel{{ number }} .carousel__activator:nth-of-type({{ forloop.index }}):checked ~ * .carousel__slide:nth-of-type({{ forloop.index }}) .carousel__image {
+        display: initial;
+    }
+    #carousel{{ number }} .carousel__activator:nth-of-type({{ forloop.index }}) ~ * .carousel__slide:nth-of-type({{ forloop.index }}) .carousel__image {
+        background-image: url("{{ item }}");
         background-size: contain;
         background-repeat: no-repeat;
-    }
-    #carousel{{ number }} .carousel__activator:nth-of-type({{ forloop.index }}) ~ * .carousel__slide:nth-of-type({{ forloop.index }}) img {
-        background-image: url("{{ item }}");
-        {%- assign clamped-height = page.carousels[number].dimensions[forloop.index0].height | at_most: include.max-height -%}
-        {%- assign ratio = page.carousels[number].dimensions[forloop.index0].width | divided_by: page.carousels[number].dimensions[forloop.index0].height -%}
         padding-top: min({{ 100 | divided_by: ratio}}%, {{ clamped-height }}px);
         padding-left: min(100%, {{ ratio | times: clamped-height }}px);
     }
-    .carousel__activator:nth-of-type({{ forloop.index }}):checked ~ .carousel__controls:nth-of-type({{ forloop.index }}) {
+    #carousel{{ number }} .carousel__activator:nth-of-type({{ forloop.index }}):checked ~ * .carousel__slide:nth-of-type({{ forloop.index }}) .carousel__filler {
+        display: none;
+    }
+    #carousel{{ number }} .carousel__activator:nth-of-type({{ forloop.index }}) ~ * .carousel__slide:nth-of-type({{ forloop.index }}) .carousel__filler {
+        padding-top: min({{ 100 | divided_by: ratio}}%, {{ clamped-height }}px);
+        padding-left: min(100%, {{ ratio | times: clamped-height }}px);
+    }
+    #carousel{{ number }} .carousel__activator:nth-of-type({{ forloop.index }}):checked ~ .carousel__controls:nth-of-type({{ forloop.index }}) {
         display: block;
         opacity: 1;
     }
-    .carousel__activator:nth-of-type({{ forloop.index }}):checked ~ .carousel__indicators .carousel__indicator:nth-of-type({{ forloop.index }}) {
+    #carousel{{ number }} .carousel__activator:nth-of-type({{ forloop.index }}):checked ~ .carousel__indicators .carousel__indicator:nth-of-type({{ forloop.index }}) {
         opacity: 1;
     }
     {% if forloop.index0 < page.carousels[number].captions.size and page.carousels[number].captions[forloop.index0] != "" -%}
-    .carousel__control:nth-of-type({{ forloop.index }}) {
+    #carousel{{ number }} .carousel__control:nth-of-type({{ forloop.index }}) {
         top: calc(50% - 24px);
     }
     {%- endif %}
