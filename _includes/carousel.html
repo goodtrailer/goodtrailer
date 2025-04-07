@@ -35,7 +35,7 @@
             {% for item in page.carousels[number].images %}
             <div class="carousel__slide">
                 <div class="carousel__window">
-                    <img class="carousel__image" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" loading="lazy"/>
+                    <img class="carousel__image" src="{{ item }}" loading="lazy"/>
                     <img class="carousel__filler" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/>
                 </div>
                 {% if forloop.index0 < page.carousels[number].captions.size and page.carousels[number].captions[forloop.index0] != "" -%}
