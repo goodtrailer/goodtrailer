@@ -7,16 +7,15 @@ assets: /assets/reading/
 {% assign a=page.assets %}
 
 ## what i've been reading
-*as of march 15, 2025*
+*as of may 10, 2025*
 
 <table class="imgrow">
     <tbody>
         <tr>
             <td>
                 {% include book.html img="Folland - RA.png" author="Folland" title="Real Analysis: Modern Techniques and Their Applications" ed="2e" href="https://www.wiley.com/en-us/Real+Analysis%3A+Modern+Techniques+and+Their+Applications%2C+2nd+Edition-p-9780471317166" %}
-                {% include book.html img="Artin - A.png" author="Artin" title="Algebra" ed="2e" href="https://www.pearson.com/en-us/subject-catalog/p/algebra-classic-version/P200000006078/9780134689609" %}
-                {% include book.html img="Munkres - T.png" author="Munkres" title="Topology" ed="2e" href="https://www.pearson.com/en-us/subject-catalog/p/topology-classic-version/P200000006299" %}
                 {% include book.html img="Tu - IM.png" author="Tu" title="An Introduction to Manifolds" ed="2e" href="https://doi.org/10.1007/978-1-4419-7400-6" %}
+                {% include book.html img="McKernan - IAT.png" author="McKernan" title="Notes: Introduction to Algebraic Topology" href="https://mathweb.ucsd.edu/~jmckerna/Teaching/24-25/Spring/190B/lectures.html" %}
             </td>
         </tr>
     </tbody>
@@ -24,7 +23,7 @@ assets: /assets/reading/
 
 ## a very opinionated tier list
 
-<span class="completed">&#9632;</span> completed<br>
+<span class="completed">&#9632;</span> essentially completed<br>
 <span class="progressed">&#9632;</span> significantly progressed<br>
 <span class="skimmed">&#9632;</span> skimmed/other
 
@@ -38,6 +37,7 @@ assets: /assets/reading/
                 {% include book.html img="Axler - LADR.png" author="Axler" title="Linear Algebra Done Right" ed="4e" href="https://linear.axler.net" class="progressed" %}
                 {% include book.html img="Hubbard - VCLADF.png" author="Hubbard, Hubbard" title="Vector Calculus, Linear Algebra, and Differential Forms" ed="5e" href="http://matrixeditions.com/5thUnifiedApproach.html" class="completed" %}
                 {% include book.html img="Gortler - F3CG.png" author="Gortler" title="Foundations of 3D Computer Graphics" href="https://mitpress.mit.edu/9780262017350/foundations-of-3d-computer-graphics" class="completed" %}
+                {% include book.html img="Folland - RA.png" author="Folland" title="Real Analysis: Modern Techniques and Their Applications" ed="2e" href="https://www.wiley.com/en-us/Real+Analysis%3A+Modern+Techniques+and+Their+Applications%2C+2nd+Edition-p-9780471317166" class="completed"%}
             </th>
         </tr>
     </thead>
@@ -45,9 +45,9 @@ assets: /assets/reading/
         <tr>
             <td>A</td>
             <td>
-                {% include book.html img="Folland - RA.png" author="Folland" title="Real Analysis: Modern Techniques and Their Applications" ed="2e" href="https://www.wiley.com/en-us/Real+Analysis%3A+Modern+Techniques+and+Their+Applications%2C+2nd+Edition-p-9780471317166" class="progressed"%}
                 {% include book.html img="Tu - IM.png" author="Tu" title="An Introduction to Manifolds" ed="2e" href="https://doi.org/10.1007/978-1-4419-7400-6" class="progressed" %}
                 {% include book.html img="Munkres - T.png" author="Munkres" title="Topology" ed="2e" href="https://www.pearson.com/en-us/subject-catalog/p/topology-classic-version/P200000006299" class="progressed" %}
+                {% include book.html img="McKernan - IAT.png" author="McKernan" title="Notes: Introduction to Algebraic Topology" href="https://mathweb.ucsd.edu/~jmckerna/Teaching/24-25/Spring/190B/lectures.html" class="completed" %}
                 {% include book.html img="Aluffi - AC0.png" author="Aluffi" title="Algebra: Chapter 0" href="https://bookstore.ams.org/gsm-104" class="skimmed" %}
                 {% include book.html img="Tao - ERI.png" author="Tao" title="An Epsilon of Room, I" href="https://bookstore.ams.org/view?ProductCode=GSM/117" class="progressed" %}
             </td>
