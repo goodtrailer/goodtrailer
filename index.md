@@ -80,7 +80,7 @@ carousels:
       height: 4000.0
     - width: 2793.0
       height: 2793.0
-    - width: 3598.0
+    - width: 3958.0
       height: 2968.0
     captions:
     - 9/05/2022, 2:28pm
