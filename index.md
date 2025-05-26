@@ -28,6 +28,7 @@ carousels:
     - /assets/index/20241203_161504.jpg
     - /assets/index/20241226_152038.jpg
     - /assets/index/20250312_173110.jpg
+    - /assets/index/20250525_190635.jpg
     dimensions:
     - width: 4000.0
       height: 3000.0
@@ -79,6 +80,8 @@ carousels:
       height: 4000.0
     - width: 2793.0
       height: 2793.0
+    - width: 3598.0
+      height: 2968.0
     captions:
     - 9/05/2022, 2:28pm
     - 9/12/2022, 5:23pm
@@ -104,7 +107,8 @@ carousels:
     - 11/11/2024, 10:43am
     - 12/03/2024, 4:15pm &mdash; hojyo's violinist
     - 12/26/2024, 3:20pm
-    - 3/12/2024, 5:31pm &mdash; kamiya's praying mantis
+    - 3/12/2025, 5:31pm &mdash; kamiya's praying mantis
+    - 5/22/2025, 7:06pm
 ---
 
 {% assign count = page.carousels[0].images.size | minus: 1 %}
