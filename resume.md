@@ -2,7 +2,7 @@
 layout: page
 title: resume
 assets: /assets/resume/
-pdf: /assets/resume/Alden_Wu_resume_2025.923.1
+pdf: /assets/resume/Alden_Wu_resume_2025.923.2
 ---
 
 *as of september 23, 2025*
