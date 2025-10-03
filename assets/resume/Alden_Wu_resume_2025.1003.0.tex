@@ -1,0 +1,256 @@
+% Resume in Latex
+% Author : Alden Wu
+% Based off of: https://github.com/jakegut/resume
+% License : MIT
+
+\documentclass[letterpaper,11pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[colorlinks, urlcolor=Blue, linkcolor=DarkOrchid, citecolor=DarkOrchid]{hyperref}
+    \urlstyle{same}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+\usepackage{newtx}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubheadingMS}[6]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+      \textit{\small#5} & \textit{\small #6} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeOSSProjectHeading}[4]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+      \textit{\footnotesize #3} & \textit{\footnotesize #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------
+
+\begin{center}
+    {\huge \scshape Alden Wu} \\[0.2em]
+    \small
+    +1 (408) 832-8816 $\mid$
+    \href{mailto:aldenwu18@gmail.com}{aldenwu18@gmail.com} $\mid$
+    \href{https://aldw.net}{aldw.net} $\mid$
+    \href{https://github.com/goodtrailer}{github.com/goodtrailer} $\mid$
+    updated \today
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+    \resumeSubHeadingListStart
+        \resumeSubheading
+            {University of California, San Diego}{San Diego, CA}
+            {Computer Science \& Pure Mathematics B.S., GPA 3.96}{September 2022 -- June 2026}
+        \resumeSubheading
+            {University of California, San Diego}{San Diego, CA}
+            {Computer Science M.S. (Specialization: Graphics \& Vision)}{September 2026 -- June 2027}
+    \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+            {\textbf{Amazon -- Software Engineer (Intern)} $\mid$ \emph{C++, Python, AWS, LLMs (Bedrock), WebDriver}}{June 2025 -- September 2025}
+            \resumeItemListStart
+                \resumeItem{Worked on LLM-based automation framework for Kindle device to facilitate CI/CD}
+                \resumeItem{Increased performance by 7x for common actions (e.g. navigation, text input) by adding new capabilities to the action model}
+                \resumeItem{Decreased cost by 5.5x for common actions by optimizing LLM interaction logic}
+                \resumeItem{Improved stability of device daemon by fixing memory buffer management}
+            \resumeItemListEnd
+        \resumeProjectHeading
+            {\textbf{Marvell -- Software Engineer (Intern)} $\mid$ \emph{PHP, HTML/CSS, JavaScript, Subversion, XAMPP}}{June 2024 -- September 2024}
+            \resumeItemListStart
+                \resumeItem{Refactored and simplified large portions of code to improve maintainability, reducing bloat and repetition}
+                \resumeItem{Coordinated with other team members to make transition to new structure seamless and painless}
+                \resumeItem{Used MySQL to display more detailed and useful information to end users}
+            \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------COURSEWORK-----------
+\section{Coursework}
+    \small{\begin{description}[leftmargin=0.5in, itemindent=-0.25in, labelindent=0.5in, itemsep=-0.2em]
+        \item[CSE] Data Structures, Algorithms, Software Engineering (OOP), Operating Systems, Networked Services, Computability, Cryptography, Optimization (ML), Differentiable Programming, Computer Vision, Virtual Reality, Computer Graphics, Animation, Rendering (PBR), Discrete Differential Geometry, Physics Simulation \\[1em]
+
+        \item[MATH] Linear Algebra, Vector Calculus, Probability, Abstract Algebra, Logic, Graph Theory, Computational Stochastics, Numerical Analysis, Real Analysis, Functional Analysis, Fourier Analysis, Lie Groups, Algebraic Topology \\[-10em]
+    \end{description}}
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+        % \resumeOSSProjectHeading
+        %     {\textbf{Path tracer, 3D renderer -- ``lajolla''} $\mid$ \emph{C++, Intel Embree, CMake}}{January 2025 -- February 2025}
+        %     {\href{https://github.com/goodtrailer/lajolla/tree/hw2}{github.com/goodtrailer/lajolla}}{}
+        %     \resumeItemListStart
+        %         \resumeItem{Physically based Monte-Carlo ray tracer, accelerated with Intel Embree}
+        %         \resumeItem{Implemented the Smith-GGX microfacet model for reflection and transmission}
+        %         \resumeItem{Improved performance with BSDF importance sampling and next event estimation (MIS)}
+        %         \resumeItem{Volumetric rendering of chromatic heterogeneous media (e.g. colored smoke)} \\[1.25em]
+        %     \resumeItemListEnd
+        \resumeProjectHeading
+            {\textbf{Path tracer, 3D renderer} -- \href{https://www.aldw.net/projects\#2024}{Sample images} $\mid$ \emph{C++, NVIDIA OptiX, CUDA, CMake}}{March 2024 -- June 2024}
+            %{\href{https://www.aldw.net/projects\#2024}{sample images}}{}
+            \resumeItemListStart
+                \resumeItem{Physically based Monte-Carlo ray tracer, GPU accelerated with NVIDIA OptiX}
+                \resumeItem{Implemented the Smith-GGX microfacet model for reflection and transmission}
+                \resumeItem{Improved performance with BSDF importance sampling and next event estimation (MIS)}
+                \resumeItem{Volumetric rendering of chromatic heterogeneous media (e.g. colored smoke)} \\[1.25em]
+            \resumeItemListEnd
+        % \resumeProjectHeading
+        %     {\textbf{AR/VR application -- ``AILA''} $\mid$ \emph{C\#, .NET, Unity, OpenXR, Meta/Oculus Quest 2}}{April 2024 -- June 2024}
+        %     \resumeItemListStart
+        %         \resumeItem{Delivered an intuitive UX by experimenting with manipulation modes (raycasts, go-go hands, WIM)}
+        %         \resumeItem{Improved comfort by implementing multiple travel methods (teleportation, joystick, skiing) to fit user preference}
+        %         \resumeItem{Guided users with effective wayfinding techniques (compass, path visualization, landmarks, object highlights)} \\[1.25em]
+        %     \resumeItemListEnd
+        \resumeProjectHeading
+            {\textbf{Study website} -- \href{https://github.com/goodtrailer/rote}{github.com/goodtrailer/rote} $\mid$ \emph{TypeScript, HTML/CSS, SQL}}{August 2023 -- September 2023}
+            %{\href{https://github.com/goodtrailer/rote}{github.com/goodtrailer/rote}}{}
+            \resumeItemListStart
+                \resumeItem{Developed a React front-end with a Node.js/Express back-end, comunicating via REST API}
+                \resumeItem{Strengthened authentication security using password hashing, HTTPS (SSL/TLS) encrypted cookies, and CORS}
+                \resumeItem{Designed a scalable database schema in PostgreSQL} \\[1.25em]
+            \resumeItemListEnd
+        % \resumeOSSProjectHeading
+        %     {\textbf{Wallpaper automation tool -- ``Daily Desktop''} $\mid$ \emph{C\#, .NET, WinForms, Win32 API, NUnit, GitHub Actions}}{April 2021 -- Present}
+        %     \resumeItemListStart
+        %         \resumeItem{Programmed an async GUI app for automating tasks}
+        %         \resumeItem{Implemented a modular and extensible interface (over 10 plugins) using OOP design patterns}
+        %         \resumeItem{Improved reliability by unit testing code and using GitHub Actions for CI/CD} \\[1.25em]
+        %     \resumeItemListEnd
+        \resumeProjectHeading
+            {\textbf{Audio capture tool} -- \href{https://github.com/goodtrailer/obs-app-audio}{github.com/goodtrailer/obs-app-audio} $\mid$ \emph{C++, Win32, gdb, Audacity}}{December 2020 -- October 2021}
+            %{\href{https://github.com/goodtrailer/obs-app-audio}{github.com/goodtrailer/obs-app-audio}}{}
+            \resumeItemListStart
+                \resumeItem{Facilitated low latency (\textasciitilde 50\textmu{s}) IPC by coding a lightweight library for Win32 pipes}
+                \resumeItem{Performed real-time audio processing from concurrent sources using efficient data structures (e.g. ring buffer)}
+                \resumeItem{Created a DLL injector to hook application APIs and intercept audio data}
+            \resumeItemListEnd
+        % \resumeProjectHeading
+        %     {\textbf{Strategy game} -- \href{https://github.com/goodtrailer/paper?tab=readme-ov-file\#screenshots}{github.com/goodtrailer/paper} $\mid$ \emph{C++, Unreal Engine, Blender}}{November 2019 -- February 2021}
+        %     %{\href{https://github.com/goodtrailer/paper}{github.com/goodtrailer/paper}}{}
+        %     \resumeItemListStart
+        %         \resumeItem{Supported online play with over 3000 pieces and 6 players concurrently using UE4 replication}
+        %         \resumeItem{Boosted performance by implementing efficient  algorithms (e.g. A* pathfinding, Bresenham line drawing)}
+        %         \resumeItem{Handled all areas of game development, e.g. modeling, texturing, animating, and scripting}
+        %     \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------OPEN-SOURCE CONTRIBUTIONS-----------
+\section{Open-Source Contributions}
+    \resumeSubHeadingListStart
+        \resumeOSSProjectHeading
+            {\textbf{Rhythm game -- ``osu!''} $|$ \emph{C\#, OpenGL, SDL, NUnit, RenderDoc, .NET}}{July 2022 -- February 2023}
+            {\href{https://github.com/ppy/osu/pulls?q=is\%3Apr+author\%3Agoodtrailer+is\%3Aclosed}{github.com/ppy/osu}, \href{https://github.com/ppy/osu-framework/pulls?q=is\%3Apr+author\%3Agoodtrailer+is\%3Aclosed}{github.com/ppy/osu-framework}}{13 PRs merged, 74 commits}
+            \resumeItemListStart
+                \resumeItem{Collaborated and contributed to a large open-source project (17.3k stars)}
+                \resumeItem{Implemented various real-time graphical effects, e.g. interactive ``smoke trail'' animations}
+                \resumeItem{Optimized performance by reducing polygon counts by \textasciitilde15\% for ``slider'' objects}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+    \small{\begin{description}[leftmargin=0.5in, itemindent=-0.25in, labelindent=0.5in, itemsep=-0.2em]
+        \item[Languages] C\#, Java, C/C++, Python, JavaScript, HTML/CSS, PHP, PostgreSQL, MATLAB, ARM Assembly
+        \item[Frameworks] Unreal Engine, Unity, React.js, Express.js, Win32, JUnit, GoogleTest, Appium/Selenium
+        \item[Developer tools] git, ssh, gdb, AWS, AWS Bedrock, NVIDIA Nsight, CMake, vcpkg, NuGet, Maven, Linux, Apache HTTP
+        \item[Libraries/etc.] .NET, OpenGL, CUDA, NVIDIA OptiX, Node.js, Passport.js, PyTorch, OpenCV, NumPy, SciPy
+    \end{description}}
+
+%-------------------------------------------
+\end{document}
