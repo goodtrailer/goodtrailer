@@ -29,6 +29,9 @@ carousels:
     - path: /assets/index/20241226_152038.jpg
     - path: /assets/index/20250312_173110.jpg
     - path: /assets/index/20250525_190635.jpg
+    - path: /assets/index/20250616_150945.jpg
+    - path: /assets/index/20250705_131609.jpg
+    - path: /assets/index/20250831_151701.jpg
     dimensions:
     - width: 4000.0
       height: 3000.0
@@ -82,6 +85,12 @@ carousels:
       height: 2793.0
     - width: 3958.0
       height: 2968.0
+    - width: 3000.0
+      height: 4000.0
+    - width: 4000.0
+      height: 3000.0
+    - width: 5920.0
+      height: 2800.0
     captions:
     - 9/05/2022, 2:28pm
     - 9/12/2022, 5:23pm
@@ -109,6 +118,9 @@ carousels:
     - 12/26/2024, 3:20pm
     - 3/12/2025, 5:31pm &mdash; kamiya's praying mantis
     - 5/22/2025, 7:06pm
+    - 6/16/2025, 3:09pm
+    - 7/05/2025, 1:16pm
+    - 8/31/2025, 3:17pm
 ---
 
 {% assign count = page.carousels[0].images.size | minus: 1 %}
