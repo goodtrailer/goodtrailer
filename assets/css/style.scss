@@ -72,6 +72,7 @@ footer .social-media-list {
 }
 
 img,
+video,
 .carousel__image,
 .pdf {
     border-radius: 10px;
@@ -183,6 +184,7 @@ img.figure {
     }
 
     img,
+    video,
     .carousel__image {
         max-height: 300px;
     }
@@ -471,6 +473,8 @@ img.figure {
     justify-content: center;
     overflow: visible;
     gap: 8px;
+    height: fit-content;
+    margin: auto 0;
 
     opacity: 0;
     transform: scale(0);

@@ -3,32 +3,32 @@ layout: base
 assets: /assets/index/
 carousels:
   - images:
-    - /assets/index/20220905_142805.jpg
-    - /assets/index/20220912_172358.jpg
-    - /assets/index/20220915_171654.jpg
-    - /assets/index/20230414_225138.jpg
-    - /assets/index/20230616_161726.jpg
-    - /assets/index/20230709_102845.jpg
-    - /assets/index/20230729_191855.jpg
-    - /assets/index/20230819_145037.jpg
-    - /assets/index/20230822_155733.jpg
-    - /assets/index/20230909_113747.jpg
-    - /assets/index/20230917_142838.jpg
-    - /assets/index/20231125_124518.jpg
-    - /assets/index/20240120_033120.jpg
-    - /assets/index/20240322_185813.jpg
-    - /assets/index/20240616_083017.jpg
-    - /assets/index/20240707_120032.jpg
-    - /assets/index/20240907_085624.jpg
-    - /assets/index/20240928_191339.jpg
-    - /assets/index/20241003_102528.jpg
-    - /assets/index/20241101_225522.jpg
-    - /assets/index/20241105_220025.jpg
-    - /assets/index/20241111_104352.jpg
-    - /assets/index/20241203_161504.jpg
-    - /assets/index/20241226_152038.jpg
-    - /assets/index/20250312_173110.jpg
-    - /assets/index/20250525_190635.jpg
+    - path: /assets/index/20220905_142805.jpg
+    - path: /assets/index/20220912_172358.jpg
+    - path: /assets/index/20220915_171654.jpg
+    - path: /assets/index/20230414_225138.jpg
+    - path: /assets/index/20230616_161726.jpg
+    - path: /assets/index/20230709_102845.jpg
+    - path: /assets/index/20230729_191855.jpg
+    - path: /assets/index/20230819_145037.jpg
+    - path: /assets/index/20230822_155733.jpg
+    - path: /assets/index/20230909_113747.jpg
+    - path: /assets/index/20230917_142838.jpg
+    - path: /assets/index/20231125_124518.jpg
+    - path: /assets/index/20240120_033120.jpg
+    - path: /assets/index/20240322_185813.jpg
+    - path: /assets/index/20240616_083017.jpg
+    - path: /assets/index/20240707_120032.jpg
+    - path: /assets/index/20240907_085624.jpg
+    - path: /assets/index/20240928_191339.jpg
+    - path: /assets/index/20241003_102528.jpg
+    - path: /assets/index/20241101_225522.jpg
+    - path: /assets/index/20241105_220025.jpg
+    - path: /assets/index/20241111_104352.jpg
+    - path: /assets/index/20241203_161504.jpg
+    - path: /assets/index/20241226_152038.jpg
+    - path: /assets/index/20250312_173110.jpg
+    - path: /assets/index/20250525_190635.jpg
     dimensions:
     - width: 4000.0
       height: 3000.0

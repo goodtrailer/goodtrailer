@@ -35,8 +35,14 @@
             {% for item in page.carousels[number].images %}
             <div class="carousel__slide">
                 <div class="carousel__window">
-                    <img class="carousel__image" src="{{ item }}" loading="lazy"/>
-                    <img class="carousel__filler" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/>
+                    {% if item.video != true -%}
+                        <img class="carousel__image" src="{{ item.path }}" loading="lazy"/>
+                        <img class="carousel__filler" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/>
+                    {%- else -%}
+                        <video class="carousel__video" controls autoplay loop>
+                            <source src="{{ item.path }}" type="video/mp4" />
+                        </video>
+                    {%-endif %}
                 </div>
                 {% if forloop.index0 < page.carousels[number].captions.size and page.carousels[number].captions[forloop.index0] != "" -%}
                     <em class="carousel__caption">{{ page.carousels[number].captions[forloop.index0] }}</em>
@@ -53,6 +59,7 @@
 </div>
 
 <style>
+
 {% for item in page.carousels[number].images %}
     {% assign clamped-height = page.carousels[number].dimensions[forloop.index0].height | at_most: include.max-height -%}
     {%- assign ratio = page.carousels[number].dimensions[forloop.index0].width | divided_by: page.carousels[number].dimensions[forloop.index0].height -%}
@@ -60,21 +67,25 @@
         opacity: 1;
         transform: scale(1);
     }
-    #carousel{{ number }} .carousel__activator:nth-of-type({{ forloop.index }}):checked ~ * .carousel__slide:nth-of-type({{ forloop.index }}) .carousel__image {
+    #carousel{{ number }} .carousel__activator:nth-of-type({{ forloop.index }}):checked ~ * .carousel__slide:nth-of-type({{ forloop.index }}) .carousel__image,
+    #carousel{{ number }} .carousel__activator:nth-of-type({{ forloop.index }}):checked ~ * .carousel__slide:nth-of-type({{ forloop.index }}) .carousel__video {
         display: initial;
     }
     #carousel{{ number }} .carousel__activator:nth-of-type({{ forloop.index }}) ~ * .carousel__slide:nth-of-type({{ forloop.index }}) .carousel__image {
-        background-image: url("{{ item }}");
+        background-image: url("{{ item.path }}");
         background-size: contain;
         background-repeat: no-repeat;
-        padding-top: min({{ 100 | divided_by: ratio}}%, {{ clamped-height }}px);
+        padding-top: min({{ 100 | divided_by: ratio }}%, {{ clamped-height }}px);
         padding-left: min(100%, {{ ratio | times: clamped-height }}px);
+    }
+    #carousel{{ number }} .carousel__activator:nth-of-type({{ forloop.index }}) ~ * .carousel__slide:nth-of-type({{ forloop.index }}) .carousel__video {
+        width: min(100%, {{ ratio | times: clamped-height }}px);
     }
     #carousel{{ number }} .carousel__activator:nth-of-type({{ forloop.index }}):checked ~ * .carousel__slide:nth-of-type({{ forloop.index }}) .carousel__filler {
         display: none;
     }
     #carousel{{ number }} .carousel__activator:nth-of-type({{ forloop.index }}) ~ * .carousel__slide:nth-of-type({{ forloop.index }}) .carousel__filler {
-        padding-top: min({{ 100 | divided_by: ratio}}%, {{ clamped-height }}px);
+        padding-top: min({{ 100 | divided_by: ratio }}%, {{ clamped-height }}px);
         padding-left: min(100%, {{ ratio | times: clamped-height }}px);
     }
     #carousel{{ number }} .carousel__activator:nth-of-type({{ forloop.index }}):checked ~ .carousel__controls:nth-of-type({{ forloop.index }}) {

@@ -4,9 +4,9 @@ title: projects
 assets: /assets/projects/
 carousels:
   - images:
-    - /assets/projects/path-tracer-0.png
-    - /assets/projects/path-tracer-1.png
-    - /assets/projects/path-tracer-2.png
+    - path: /assets/projects/path-tracer-0.png
+    - path: /assets/projects/path-tracer-1.png
+    - path: /assets/projects/path-tracer-2.png
     dimensions:
     - width: 1440.0
       height: 1080.0
@@ -15,9 +15,22 @@ carousels:
     - width: 480.0
       height: 480.0
   - images:
-    - /assets/projects/paper-0.png
-    - /assets/projects/paper-1.png
-    - /assets/projects/paper-2.png
+    - path: /assets/projects/physics-0.mp4
+      video: true
+    - path: /assets/projects/physics-1.mp4
+      video: true
+    - path: /assets/projects/physics-2.png
+    dimensions:
+    - width: 1280.0
+      height: 720.0
+    - width: 1280.0
+      height: 720.0
+    - width: 1280.0
+      height: 720.0
+  - images:
+    - path: /assets/projects/paper-0.png
+    - path: /assets/projects/paper-1.png
+    - path: /assets/projects/paper-2.png
     dimensions:
     - width: 960.0
       height: 720.0
@@ -32,13 +45,24 @@ carousels:
 ## 2024
 
 {:.project-vertical}
-<div>
+<div id="pbr">
 {% include carousel.html max-height="300" number="1" %}
 <div>
 ### physically based path tracer
 Physically based rendering (PBR) using path tracing and Monte Carlo methods. Implements the Smith-GGX microfacet model for specular reflection and transmission based on [[Walter et al. 2007]](https://www.cs.cornell.edu/~srm/publications/EGSR07-btdf.html). Uses classical multiple importance sampling of the BSDF and next event estimation. Final project for CSE 168: Computer Graphics II at UC San Diego.
 <br><br>
 source unavailable (schoolwork) // [partial writeup](/work/2024/06/11/cse168-hw5/)
+</div>
+</div>
+
+{:.project-vertical}
+<div id="physics">
+{% include carousel.html max-height="300" number="2" %}
+<div>
+### various geometry/physics simulations
+Derived and implemented the equations of motion for a triple pendulum using Lagrangian mechanics. Simulated 2D fluids using vortex methods, applying Kelvin's circulation theorem and discretizing the Biot-Savart law. Computed geodesic distances on curved geometry using the heat method (discretizing and integrating the heat flow). Coursework for CSE 270: Discrete Differential Geometry and CSE 291: Physics Simulation at UC San Diego.
+<br><br>
+source unavailable (schoolwork) // [triple pendulum writeup (PDF)](/assets/projects/physics-triple-pendulum.pdf)
 </div>
 </div>
 
@@ -82,7 +106,7 @@ Automatic wallpaper updater. Windows GUI app written in C# with extensibility in
 
 {:.project}
 <div>
-{% include carousel.html max-height="213" number="2" %}
+{% include carousel.html max-height="213" number="3" %}
 <div>
 ### *paper*. online turn-based game
 PvP multiplayer video game running on Unreal Engine 4. Full support for online (and local) play with up to 6 players at once. Based off of little board games I used to make in elementary school out of paper. 😄

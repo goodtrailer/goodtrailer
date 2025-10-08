@@ -14,7 +14,7 @@ plugins:
 
 header_pages:
   - projects.md
-  - reading.md
+  - math.md
   - resume.md
   - archive.md
   - about.md
