@@ -32,6 +32,11 @@ carousels:
     - path: /assets/index/20250616_150945.jpg
     - path: /assets/index/20250705_131609.jpg
     - path: /assets/index/20250831_151701.jpg
+    - path: /assets/index/20250901_141304.mp4
+      video: true
+    - path: /assets/index/20251121_182006.jpg
+    - path: /assets/index/20251218_105500.jpg
+    - path: /assets/index/20251224_203218.jpg
     dimensions:
     - width: 4000.0
       height: 3000.0
@@ -91,6 +96,14 @@ carousels:
       height: 3000.0
     - width: 5920.0
       height: 2800.0
+    - width: 1080.0
+      height: 1920.0
+    - width: 2992.0
+      height: 2992.0
+    - width: 2884.0
+      height: 2884.0
+    - width: 3000.0
+      height: 4000.0
     captions:
     - 9/05/2022, 2:28pm
     - 9/12/2022, 5:23pm
@@ -121,6 +134,10 @@ carousels:
     - 6/16/2025, 3:09pm
     - 7/05/2025, 1:16pm
     - 8/31/2025, 3:17pm
+    - 9/01/2025, 2:13pm
+    - 11/21/2025, 6:20pm
+    - 12/18/2025, 10:55pm
+    - 12/24/2025, 8:32pm
 ---
 
 {% assign count = page.carousels[0].images.size | minus: 1 %}

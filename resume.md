@@ -2,11 +2,12 @@
 layout: page
 title: resume
 assets: /assets/resume/
-pdf: /assets/resume/Alden_Wu_resume_2025.1007.0
+pdf: /assets/resume/Alden_Wu_resume_2026.113.0
+katex: true
 ---
 
-*as of October 7, 2025*
+*as of january 13, 2026*
 
-[PNG permalink]({{page.pdf}}.png) // [PDF permalink]({{page.pdf}}.pdf) // [PDF download]({{page.pdf}}.pdf){:download=""} // [TEX download]({{page.pdf}}.tex)
+[PNG permalink]({{page.pdf}}.png) // [PDF permalink]({{page.pdf}}.pdf) // [PDF download]({{page.pdf}}.pdf){:download=""} // [$$\TeX$$ download]({{page.pdf}}.tex)
 
 ![]({{page.pdf}}.png)
