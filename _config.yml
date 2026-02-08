@@ -13,6 +13,7 @@ plugins:
   - jekyll-seo-tag
 
 header_pages:
+  - index.md
   - projects.md
   - math.md
   - resume.md

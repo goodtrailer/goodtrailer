@@ -1,5 +1,6 @@
 ---
 layout: base
+title: home
 assets: /assets/index/
 carousels:
   - images:
