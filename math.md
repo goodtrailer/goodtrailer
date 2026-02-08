@@ -27,7 +27,7 @@ assets: /assets/math/
 <span class="progressed">&#9632;</span> significantly progressed<br>
 <span class="skimmed">&#9632;</span> skimmed/other
 
-*ordered left&rarr;right as like&rarr;dislike*
+*ordered horizontally as like&rarr;dislike*
 
 <table class="tierlist">
     <thead>
@@ -65,15 +65,15 @@ assets: /assets/math/
         <tr>
             <td>C</td>
             <td>
+                {% include book.html img="Akenine-Moller - RTR.png" author="Akenine-M&ouml;ller et al." title="Real-Time Rendering" ed="4e" href="https://www.realtimerendering.com" class="progressed" %}
                 {% include book.html img="Artin - A.png" author="Artin" title="Algebra" ed="2e" href="https://www.pearson.com/en-us/subject-catalog/p/algebra-classic-version/P200000006078/9780134689609" class="progressed" %}
                 {% include book.html img="Nederpelt - TTFP.png" author="Nederpelt, Guevers" title="Type Theory and Formal Proof" href="https://doi.org/10.1017/CBO9781139567725" class="skimmed" %}
-                {% include book.html img="Deisenroth - MML.png" author="Deisenroth, Faisal, Ong" title="Mathematics of Machine Learning" href="https://mml-book.com" class="skimmed" %}
             </td>
         </tr>
         <tr>
             <td>D</td>
             <td>
-                {% include book.html img="Akenine-Moller - RTR.png" author="Akenine-M&ouml;ller et al." title="Real-Time Rendering" ed="4e" href="https://www.realtimerendering.com" class="progressed" %}
+                {% include book.html img="Deisenroth - MML.png" author="Deisenroth, Faisal, Ong" title="Mathematics of Machine Learning" href="https://mml-book.com" class="skimmed" %}
                 {% include book.html img="Larson - C.png" author="Larson" title="Calculus" ed="9e" href="https://www.cengage.com/c/calculus-11e-larson/9780547167022/" class="completed" %}
             </td>
         </tr>
