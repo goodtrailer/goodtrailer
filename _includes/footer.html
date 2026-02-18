@@ -3,9 +3,9 @@
 
     <div class="wrapper">
         {%- comment -%}{%- if page.url == '/' -%}
-            <div class="footer-col-wrapper" style="margin: -20px 0 0">
-                <p style="margin: auto; text-align: center">&#x25B2;</p>
-            </div>
+        <div class="footer-col-wrapper" style="margin: -20px 0 0">
+            <p style="margin: auto; text-align: center">&#x25B2;</p>
+        </div>
         {%- endif -%}{%- endcomment -%}
 
         <div class="footer-col-wrapper">
@@ -16,6 +16,7 @@
                     <li class="p-name">{{ site.author.name | escape }}</li>
                     {% endif -%}
                     {% if site.author.email -%}
+                    <li><a class="u-email" href="mailto:{{ site.author.email-work }}">{{ site.author.email-work }}</a></li>
                     <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
                     {%- endif %}
                 </ul>
@@ -32,15 +33,15 @@
                     </div>
                     a haiku. (i don't actually hate javascript.)
                     <br><br>
-                    <a href="https://www.github.com/goodtrailer/goodtrailer">source code on github</a>
+                    <a href="https://www.github.com/{{ site.repository }}">source code on github</a>
                 </div>
             </div>
         </div>
 
         {%- comment -%}{%- if page.url == '/' -%}
-            <div class="footer-col-wrapper" style="padding: 800px 0 0 0">
-                <p>easter egg! &#128075; this padding is here to make the "contact" redirect look nicer &#128523;</p>
-            </div>
+        <div class="footer-col-wrapper" style="padding: 800px 0 0 0">
+            <p>easter egg! &#128075; this padding is here to make the "contact" redirect look nicer &#128523;</p>
+        </div>
         {%- endif -%}{%- endcomment -%}
     </div>
 </footer>

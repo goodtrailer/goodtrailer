@@ -2,8 +2,9 @@ remote_theme: jekyll/minima@93b192192c0777018c9ac4daadaafd5af5a4f750
 
 title: aldw
 author:
-  name: Alden Wu (goodtrailer)
-  email: aldenwu18@gmail.com
+  name: alden wu (goodtrailer)
+  email: me@aldw.net
+  email-work: hireme@aldw.net
 repository: goodtrailer/goodtrailer
 
 plugins:
@@ -31,7 +32,7 @@ permalink: pretty
 
 minima:
   social_links:
-    - { platform: email, user_url: "mailto:aldenwu18@gmail.com", title: "Email" }
+    - { platform: email, user_url: "mailto:me@aldw.net", title: "Email (Personal)" }
     - { platform: rss, user_url: "/feed.xml", title: "RSS" }
     - { platform: linkedin, user_url: "https://www.linkedin.com/in/aldenwu0", title: "LinkedIn" }
     - { platform: github, user_url: "https://github.com/goodtrailer", title: "GitHub" }
