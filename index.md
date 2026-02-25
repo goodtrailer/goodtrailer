@@ -38,6 +38,7 @@ carousels:
     - path: /assets/index/20251121_182006.jpg
     - path: /assets/index/20251218_105500.jpg
     - path: /assets/index/20251224_203218.jpg
+    - path: /assets/index/20260219_203530.jpg
     dimensions:
     - width: 4000.0
       height: 3000.0
@@ -105,6 +106,8 @@ carousels:
       height: 2884.0
     - width: 3000.0
       height: 4000.0
+    - width: 2992.0
+      height: 2992.0
     captions:
     - 9/05/2022, 2:28pm
     - 9/12/2022, 5:23pm
@@ -139,6 +142,7 @@ carousels:
     - 11/21/2025, 6:20pm &mdash; lang's crane on a plane (krishna ver.)
     - 12/18/2025, 10:55pm
     - 12/24/2025, 8:32pm
+    - 2/19/2026, 8:35pm &mdash; kato's shiba inu
 ---
 
 {% assign count = page.carousels[0].images.size | minus: 1 %}
