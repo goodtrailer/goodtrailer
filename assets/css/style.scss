@@ -475,12 +475,13 @@ img.figure {
     gap: 8px;
     height: fit-content;
     margin: auto 0;
-
+    
+    z-index: -100;
     opacity: 0;
-    transform: scale(0);
 
     .carousel__image {
         display: none;
+        position: absolute;
         width: 0;
         height: 0;
     }

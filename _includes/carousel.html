@@ -64,12 +64,23 @@
     {% assign clamped-height = page.carousels[number].dimensions[forloop.index0].height | at_most: include.max-height -%}
     {%- assign ratio = page.carousels[number].dimensions[forloop.index0].width | divided_by: page.carousels[number].dimensions[forloop.index0].height -%}
     #carousel{{ number }} .carousel__activator:nth-of-type({{ forloop.index }}):checked ~ * .carousel__slide:nth-of-type({{ forloop.index }}) {
+        z-index: 0;
         opacity: 1;
-        transform: scale(1);
+    }
+    #carousel{{ number }} .carousel__activator:nth-of-type({{ forloop.index | plus: 1 | modulo: forloop.length | plus: 1 }}):checked ~ * .carousel__slide:nth-of-type({{ forloop.index }}) .carousel__image,
+    #carousel{{ number }} .carousel__activator:nth-of-type({{ forloop.index | plus: 1 | modulo: forloop.length | plus: 1 }}):checked ~ * .carousel__slide:nth-of-type({{ forloop.index }}) .carousel__video,
+    #carousel{{ number }} .carousel__activator:nth-of-type({{ forloop.index | plus: 0 | modulo: forloop.length | plus: 1 }}):checked ~ * .carousel__slide:nth-of-type({{ forloop.index }}) .carousel__image,
+    #carousel{{ number }} .carousel__activator:nth-of-type({{ forloop.index | plus: 0 | modulo: forloop.length | plus: 1 }}):checked ~ * .carousel__slide:nth-of-type({{ forloop.index }}) .carousel__video,
+    #carousel{{ number }} .carousel__activator:nth-of-type({{ forloop.index | minus: 2 | modulo: forloop.length | plus: 1 }}):checked ~ * .carousel__slide:nth-of-type({{ forloop.index }}) .carousel__image,
+    #carousel{{ number }} .carousel__activator:nth-of-type({{ forloop.index | minus: 2 | modulo: forloop.length | plus: 1 }}):checked ~ * .carousel__slide:nth-of-type({{ forloop.index }}) .carousel__video,
+    #carousel{{ number }} .carousel__activator:nth-of-type({{ forloop.index | minus: 3 | modulo: forloop.length | plus: 1 }}):checked ~ * .carousel__slide:nth-of-type({{ forloop.index }}) .carousel__image,
+    #carousel{{ number }} .carousel__activator:nth-of-type({{ forloop.index | minus: 3 | modulo: forloop.length | plus: 1 }}):checked ~ * .carousel__slide:nth-of-type({{ forloop.index }}) .carousel__video {
+        display: initial;
     }
     #carousel{{ number }} .carousel__activator:nth-of-type({{ forloop.index }}):checked ~ * .carousel__slide:nth-of-type({{ forloop.index }}) .carousel__image,
     #carousel{{ number }} .carousel__activator:nth-of-type({{ forloop.index }}):checked ~ * .carousel__slide:nth-of-type({{ forloop.index }}) .carousel__video {
         display: initial;
+        position: static;
     }
     #carousel{{ number }} .carousel__activator:nth-of-type({{ forloop.index }}) ~ * .carousel__slide:nth-of-type({{ forloop.index }}) .carousel__image {
         background-image: url("{{ item.path }}");
