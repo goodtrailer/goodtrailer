@@ -41,6 +41,14 @@ carousels:
     - path: /assets/index/20260219_203530.jpg
     - path: /assets/index/20260327_202215.jpg
     - path: /assets/index/20260409_205258.jpg
+    - path: /assets/index/20260515_135344.jpg
+    - path: /assets/index/20260615_111346.jpg
+    - path: /assets/index/20260616_101537.jpg
+    - path: /assets/index/20260616_102108.jpg
+    - path: /assets/index/20260624_100506.jpg
+    - path: /assets/index/20260712_143600.jpg
+    - path: /assets/index/20260830_084936.jpg
+    - path: /assets/index/20260905_150011.jpg
     dimensions:
     - width: 4000.0
       height: 3000.0
@@ -114,6 +122,22 @@ carousels:
       height: 3000.0
     - width: 2992.0
       height: 2992.0
+    - width: 2992.0
+      height: 2992.0
+    - width: 4000.0
+      height: 3000.0
+    - width: 4000.0
+      height: 3000.0
+    - width: 2896.0
+      height: 5024.0
+    - width: 2444.0
+      height: 2444.0
+    - width: 2992.0
+      height: 2992.0
+    - width: 2992.0
+      height: 2992.0
+    - width: 4000.0
+      height: 3000.0
     captions:
     - 5 sep 2022, 2:28pm
     - 12 sep 2022, 5:23pm
@@ -151,6 +175,14 @@ carousels:
     - 19 feb 2026, 8:35pm &mdash; kato's shiba inu
     - 27 mar 2026, 8:22pm
     - 9 apr 2026, 8:52pm &mdash; sato's square rose
+    - 15 may 2026, 1:53pm &mdash; hwang's hydro
+    - 15 jun 2026, 11:13am
+    - 16 jun 2026, 10:15am
+    - 16 jun 2026, 10:21am
+    - 24 jun 2026, 10:05am
+    - 12 jul 2026, 2:36pm &mdash; bell pepper (seriously)
+    - 30 aug 2026, 8:49am
+    - 5 sep 2026, 3:00pm
 ---
 
 {% assign count = page.carousels[0].images.size | minus: 1 %}

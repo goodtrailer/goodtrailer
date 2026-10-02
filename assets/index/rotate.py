@@ -4,12 +4,8 @@ import subprocess
 from pathlib import Path
 
 targets = {
-    "20260219_203530.jpg",
-    "20250616_150945.jpg",
-    "20251224_203218.jpg",
-    "20250616_150945.jpg",
-    "20241226_152038.jpg",
-    "20241111_104352.jpg",
+    "20260830_084936.jpg",
+    "20260712_143600.jpg",
 }
 
 if len(targets) == 0:
