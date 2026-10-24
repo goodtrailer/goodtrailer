@@ -2,12 +2,13 @@
 layout: page
 title: math stuff
 assets: /assets/math/
+date: 2026-10-01 00:00:00 +0000
 ---
 
 {% assign a=page.assets %}
 
 ## what i've been reading
-*as of october 1, 2026*
+*as of {{ page.date | date: "%-d %b %Y" | downcase}}*
 
 <table class="imgrow">
     <tbody>

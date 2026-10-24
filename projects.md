@@ -42,18 +42,20 @@ carousels:
 
 {::options parse_block_html="true" /}
 
-## 2024
+## 2025
 
 {:.project-vertical}
 <div id="pbr">
 {% include carousel.html max-height="300" number="1" %}
 <div>
 ### physically based path tracer
-Physically based rendering (PBR) using path tracing and Monte Carlo methods. Implements the Smith-GGX microfacet model for specular reflection and transmission based on [[Walter et al. 2007]](https://www.cs.cornell.edu/~srm/publications/EGSR07-btdf.html). Uses classical multiple importance sampling of the BSDF and next event estimation. Final project for CSE 168: Computer Graphics II at UC San Diego.
+Physically based rendering (PBR) using path tracing and Monte Carlo methods. Implements the Smith-GGX microfacet model for specular reflection and transmission based on [[Walter et al. 2007]](https://www.cs.cornell.edu/~srm/publications/EGSR07-btdf.html). Uses classical multiple importance sampling of the BSDF and next event estimation. Project for CSE 168: Computer Graphics II and CSE 272: Advanced Image Synthesis at UC San Diego.
 <br><br>
 source unavailable (schoolwork) // [partial writeup](/work/2024/06/11/cse168-hw5/)
 </div>
 </div>
+
+## 2024
 
 {:.project-vertical}
 <div id="physics">

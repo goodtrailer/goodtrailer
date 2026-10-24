@@ -2,12 +2,15 @@
 layout: page
 title: resume
 assets: /assets/resume/
-pdf: /assets/resume/Alden_Wu_resume_2026.1009.0
+date: 2026-10-23 00:00:00 +0000
+patch: 0
 katex: true
 ---
 
-*as of october 9, 2026*
+{% capture filename %}{{ page.assets}}Alden_Wu_resume_{{ page.date | date: "%Y.%-m%d" }}.{{ page.patch }}{% endcapture %}
 
-[PNG permalink]({{page.pdf}}.png) // [PDF permalink]({{page.pdf}}.pdf) // [PDF download]({{page.pdf}}.pdf){:download=""} // [$$\TeX$$ download]({{page.pdf}}.tex)
+*as of {{ page.date | date: "%-d %b %Y" | downcase}}*
 
-![]({{page.pdf}}.png)
+[PNG permalink]({{ filename }}.png) // [PDF permalink]({{ filename }}.pdf) // [$$\TeX$$ permalink]({{ filename }}.tex)
+
+![]({{filename}}.png)

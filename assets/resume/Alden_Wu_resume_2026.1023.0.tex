@@ -1,0 +1,310 @@
+% Resume in Latex
+% Author : Alden Wu
+% Based off of: https://github.com/jakegut/resume
+% License : MIT
+
+\documentclass[letterpaper,11pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[colorlinks, urlcolor=Blue, linkcolor=DarkOrchid, citecolor=DarkOrchid]{hyperref}
+    \urlstyle{same}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+\usepackage{newtx}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubheadingMS}[6]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      {\small#3} & {\small #4} \\
+      {\small#5} & {\small #6} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeOSSProjectHeading}[4]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+      \textit{\footnotesize #3} & \textit{\footnotesize #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------
+
+\begin{center}
+    {\huge \scshape Alden Wu} \\[0.2em]
+    \small
+    +1 (408) 832-8816 $\mid$
+    \href{mailto:contact@aldw.net}{contact@aldw.net} $\mid$
+    \href{https://aldw.net/projects}{aldw.net} $\mid$
+    \href{https://github.com/goodtrailer}{github.com/goodtrailer} $\mid$
+    updated \today
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+    \resumeSubHeadingListStart
+        \resumeSubheadingMS
+            {University of California, San Diego}{San Diego, CA}
+            {Computer Science M.S. (Depth: Graphics \& Vision), GPA 4.0}{Sep 2025 -- Jun 2027}
+            {Computer Science B.S. \& Mathematics B.S., GPA 3.92}{Sep 2022 -- Jun 2026}
+    \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+            {\textbf{UC San Diego -- Computer Graphics Researcher (Student)} $\mid$ \emph{Python, PyTorch, CUDA, ROCm}}{Mar 2026 -- Sep 2026}
+            \resumeItemListStart
+                \resumeItem{Investigated mechanistic algorithms based on AI diffusion models for 2D \& 3D content generation}
+                \resumeItem{Engineered asymptotic performance improvements---observing up to 262,000x speedups in practice---by adapting efficient 2D image algorithms (e.g. PatchMatch) to 3D voxel domains plus GPU acceleration}
+                \resumeItem{Explored efficient representations for 3D geometry: implicit surfaces, NeRFs, point clouds, etc.}
+            \resumeItemListEnd
+        \resumeProjectHeading
+            {\textbf{Amazon -- Software Engineer Intern} $\mid$ \emph{Linux, Android, C++, Python, AWS, LLM, WebDriver}}{Jun 2025 -- Sep 2025}
+            \resumeItemListStart
+                \resumeItem{Worked on an agentic AI/LLM-based automation framework for facilitating CI/CD on Kindle device}
+                \resumeItem{Reduced cost 5.5x and sped up execution time 7x for navigation, keypresses, and other essential capabilities}
+                \resumeItem{Improved stability of device-side daemon by debugging and fixing memory buffer management}
+                \resumeItem{Collaborated in Agile workflows with Jira, participating in sprint planning, cross-team meetings, code reviews}
+            \resumeItemListEnd
+        \resumeProjectHeading
+            {\textbf{Marvell -- Software Engineer Intern} $\mid$ \emph{PHP, HTML/CSS, JavaScript, Subversion, XAMPP}}{Jun 2024 -- Sep 2024}
+            \resumeItemListStart
+                \resumeItem{Refactored and simplified large portions of code to improve maintainability, reducing bloat and repetition}
+                % \resumeItem{Coordinated with other team members to make transition to new structure seamless and painless}
+                \resumeItem{Used MySQL to display more detailed and useful information to end users}
+            \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------OPEN-SOURCE CONTRIBUTIONS-----------
+% \section{Open-Source Contributions}
+%     \resumeSubHeadingListStart
+%         \resumeOSSProjectHeading
+%             {\textbf{Video game -- ``osu!'' (19.2k stars)} $|$ \emph{C\#, OpenGL, SDL, NUnit, RenderDoc, .NET}}{Jul 2022 -- Feb 2023}
+%             {\href{https://github.com/ppy/osu/pulls?q=is\%3Apr+author\%3Agoodtrailer+is\%3Aclosed}{github.com/ppy/osu}, \href{https://github.com/ppy/osu-framework/pulls?q=is\%3Apr+author\%3Agoodtrailer+is\%3Aclosed}{github.com/ppy/osu-framework}}{13 PRs merged, 74 commits}
+%             \resumeItemListStart
+%                 \resumeItem{Contributed 13 PRs to a \textbf{19.2k-star project} with \textbf{38M+ users}, navigating strict maintainer review and quality standards}
+%                 \resumeItem{Optimized performance by \textbf{reducing polygon counts by \textasciitilde15\%} for ``slider'' objects}
+%                 \resumeItem{Implemented several \textbf{real-time graphical effects}, e.g. interactive ``smoke trail'' animations}
+%         \resumeItemListEnd
+%     \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+            {\textbf{Path tracer, 3D renderer} -- \href{https://www.aldw.net/projects\#pbr}{aldw.net/projects\#pbr} $\mid$ \emph{C++, NVIDIA OptiX, CUDA, CMake}}{Jan 2025 -- Feb 2025}
+            \resumeItemListStart
+                \resumeItem{Physically based Monte-Carlo ray tracer, GPU accelerated with NVIDIA OptiX}
+                \resumeItem{Implemented the Smith-GGX microfacet model for reflection and transmission, with intuitive material parameters}
+                \resumeItem{Accelerated convergence with photon mapping, BSDF importance sampling, next event estimation, MIS}
+                \resumeItem{Supported numerous output color spaces (Linear, sRGB, CIEXYZ, Rec. 2020) and HDR}
+                % \resumeItem{Volumetric rendering of colored smoke and other chromatic heterogeneous media}
+            \resumeItemListEnd
+        % \resumeProjectHeading
+        %     {\textbf{Path tracer, 3D renderer} -- \href{https://www.aldw.net/projects\#pbr}{aldw.net/projects\#pbr} $\mid$ \emph{C++, NVIDIA OptiX, CUDA, CMake}}{Mar 2024 -- Jun 2024}
+        %     \resumeItemListStart
+        %         \resumeItem{Physically based Monte-Carlo ray tracer, GPU accelerated with NVIDIA OptiX}
+        %         \resumeItem{Implemented the Smith-GGX microfacet model for reflection and transmission}
+        %         \resumeItem{Improved performance with BSDF importance sampling and next event estimation (MIS)}
+        %         \resumeItem{Volumetric rendering of chromatic heterogeneous media (e.g. colored smoke)}
+        %     \resumeItemListEnd
+        \resumeProjectHeading
+            {\textbf{Physics/geometry simulations} -- \href{https://www.aldw.net/projects\#physics}{aldw.net/projects/\#physics} $\mid$ \emph{C++, Houdini, NumPy, SciPy}}{Jan 2024 -- Jun 2024}
+            \resumeItemListStart
+                \resumeItem{Derived and implemented the equations of motion for a triple pendulum using Lagrangian mechanics}
+                \resumeItem{Developed numerical integrators for nonlinear systems modeling complex multi-body dynamics}
+                \resumeItem{Simulated 2D fluids using vortex methods, applying Kelvin's circulation theorem and a discretized Biot-Savart law}
+                \resumeItem{Computed geodesic distances in curved geometry by integrating heat flows (heat method)}
+            \resumeItemListEnd
+        \resumeProjectHeading
+           {\textbf{AR/VR application -- ``AILA''} $\mid$ \emph{C\#, .NET, Unity, Blender, OpenXR, Meta Quest 2}}{Apr 2024 -- Jun 2024}
+           \resumeItemListStart
+               \resumeItem{Delivered intuitive UX by experimenting with many interaction modes: raycasts, go-go hands, WIM}
+               \resumeItem{Improved accessibility by implementing multiple travel methods: teleportation, joystick, skiing}
+               % \resumeItem{Guided users with effective wayfinding techniques (compass, path visualization, landmarks, object highlights)}
+           \resumeItemListEnd
+        % \resumeProjectHeading
+        %     {\textbf{Study website} -- \href{https://github.com/goodtrailer/rote}{github.com/goodtrailer/rote} $\mid$ \emph{TypeScript, HTML/CSS, SQL}}{Aug 2023 -- Sep 2023}
+        %     \resumeItemListStart
+        %         \resumeItem{Developed a \textbf{React front-end} with a \textbf{Node.js/Express back-end}, comunicating via REST API}
+        %         \resumeItem{Strengthened \textbf{authentication security} using password hashing, HTTPS (SSL/TLS) encrypted cookies, and CORS}
+        %         \resumeItem{Designed a scalable database schema in PostgreSQL}
+        %     \resumeItemListEnd
+        % \resumeOSSProjectHeading
+        %     {\textbf{Wallpaper automation tool -- ``Daily Desktop''} $\mid$ \emph{C\#, .NET, WinForms, Win32 API, NUnit, GitHub Actions}}{Apr 2021 -- Present}
+        %     \resumeItemListStart
+        %         \resumeItem{Programmed an async GUI app for automating tasks}
+        %         \resumeItem{Implemented a modular and extensible interface (over 10 plugins) using OOP design patterns}
+        %         \resumeItem{Improved reliability by unit testing code and using GitHub Actions for CI/CD}
+        %     \resumeItemListEnd
+        % \resumeProjectHeading
+        %     {\textbf{Audio capture tool} -- \href{https://github.com/goodtrailer/obs-app-audio}{github.com/goodtrailer/obs-app-audio} $\mid$ \emph{C++, Win32, WASAPI, gdb, Audacity}}{Dec 2020 -- Oct 2021}
+        %     \resumeItemListStart
+        %         \resumeItem{Facilitated low latency ($<$ 50\textmu{s}) IPC by coding a lightweight library for Win32 pipes}
+        %         \resumeItem{Performed real-time audio processing on parallel sources with multithreading and efficient data structures (e.g. ring buffer)}
+        %         \resumeItem{Created a DLL injector to hook application APIs and intercept audio data}
+        %     \resumeItemListEnd
+        \resumeOSSProjectHeading
+            {\textbf{Video game -- ``osu!'' (Open-Source, 19.2k stars)} $|$ \emph{C\#, .NET, OpenGL, SDL2, NUnit, RenderDoc}}{Jul 2022 -- Feb 2023}
+            {\href{https://github.com/ppy/osu/pulls?q=is\%3Apr+author\%3Agoodtrailer+is\%3Aclosed}{github.com/ppy/osu}, \href{https://github.com/ppy/osu-framework/pulls?q=is\%3Apr+author\%3Agoodtrailer+is\%3Aclosed}{github.com/ppy/osu-framework}}{13 PRs, 74 commits}
+            \resumeItemListStart
+                \resumeItem{Contributed 13 PRs to a project with 38M+ users, navigating strict maintainer review and quality standards}
+                \resumeItem{Optimized performance by debugging with RenderDoc, reducing poly-counts by \textasciitilde15\% for ``sliders''}
+                % \resumeItem{Implemented several real-time graphical effects, e.g. interactive ``smoke trail'' animations}
+        \resumeItemListEnd
+        % \resumeProjectHeading
+        %     {\textbf{Video game} -- \href{https://github.com/goodtrailer/paper?tab=readme-ov-file\#screenshots}{github.com/goodtrailer/paper} $\mid$ \emph{C++, Unreal Engine, HLSL, Blender}}{Nov 2019 -- Feb 2021}
+        %     \resumeItemListStart
+        %         \resumeItem{Supported online play with over 3000 pieces and 6 players concurrently using UE4 replication}
+        %         \resumeItem{Boosted performance by implementing fast 2D algorithms (e.g. A* pathfinding, Bresenham line drawing)}
+        %         % \resumeItem{Handled all areas of game development, e.g. modeling, texturing, animating, and scripting}
+        %     \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------COURSEWORK-----------
+\section{Coursework}
+    \small{\begin{description}[leftmargin=0.5in, itemindent=-0.25in, labelindent=0.5in, itemsep=-0.2em]
+        \item[CSE]
+        Graphics,
+        Rendering (PBR),
+        Animation,
+        Physics Simulation,
+        Virtual Reality,
+        Image Processing,
+        Differentiable Programming,
+        Computer Vision,
+        Robotics,
+        Embedded Systems (FPGA),
+        Parallel Programming,
+        Operating Systems,
+        Computer Architecture
+        % Networked Services,
+        % PL/Compilers,
+        % Optimization (ML)
+        % Data Structures,
+        % Algorithms,
+        % Software Engineering (OOP),
+        % Cryptography
+        % Computability
+        \\[1em]
+
+        \item[MATH]
+        Differential Geometry (\& DDG),
+        Fourier Analysis,
+        Numerical Analysis,
+        Linear Algebra,
+        Vector Calculus,
+        Probability,
+        Computational Stochastics,
+        Real Analysis,
+        Functional Analysis,
+        Groups,
+        Rings,
+        Fields,
+        Graph Theory,
+        Algebraic Topology
+        % Logic,
+        % Lie Groups,
+        \\[-10em]
+    \end{description}}
+
+\section{Technical Skills}
+    \small{\begin{description}[leftmargin=0.5in, itemindent=-0.25in, labelindent=0.5in, itemsep=-0.2em]
+        \item[Languages] C/C++, GLSL, HLSL, C\#, Java, Python, MATLAB, JavaScript, HTML/CSS, PHP, PostgreSQL
+        \item[Frameworks] CUDA, ROCm, PyTorch, OpenCV, OpenGL, Vulkan, Unreal Engine, Unity, Win32, .NET, NumPy, SciPy
+        \item[Developer tools] Linux, git, ssh, gdb, Claude Code, Codex, AWS, NVIDIA Nsight, CMake, vcpkg, Blender, Houdini
+    \end{description}}
+
+%-------------------------------------------
+\end{document}
